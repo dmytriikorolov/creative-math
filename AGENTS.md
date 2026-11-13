@@ -32,7 +32,7 @@
 - Report skipped GPU tests and unavailable Xcode/desktop checks explicitly. Never claim visual QA from a build/open exit status or animation acceptance from stills. No milestone completion without acceptance evidence.
 
 ## Git and PRs
-- Inspect status, recent history, remotes and existing author identity before edits. This audited source snapshot has no `.git`; do not initialize a replacement or guess a remote. Resume Git operations in the genuine checkout.
+- Inspect status, recent history, remotes and existing author identity before edits. Git is initialized with origin `dmytriikorolov/creative-math`; if primary `.git` writes are restricted, use a disclosed isolated local clone under `/private/tmp`, preserving history/identity.
 - `main` is stable; use bounded `feature/<scope>` branches. Stage explicit files; make descriptive commits. Preserve author configuration and unrelated work.
 - Publish only when authorized, using the authenticated account. PRs target `main` and include changes, executed tests, screenshots and known limitations. No AI co-author trailer unless repository policy requires it.
 - Never push directly to main, merge without explicit approval, force-push, rewrite history, delete user files, expose credentials or create/publish a repository without explicit authorization.

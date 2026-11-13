@@ -2,6 +2,7 @@ import Foundation
 import CoreGraphics
 
 public enum WorkspaceScene: String, Sendable {
+    case vectorFields
     case optimization
     case blank
     case triangle
@@ -12,6 +13,7 @@ public enum WorkspaceScene: String, Sendable {
 
     public var title: String {
         switch self {
+        case .vectorFields: "Vector Fields"
         case .optimization: "Optimization Lab"
         case .blank: "Blank Scene"
         case .triangle: "Triangle Study"

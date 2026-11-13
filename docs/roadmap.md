@@ -45,9 +45,14 @@ Reuse M2 rendering and M3.1 interactions without changing the Torus model. No le
 Evidence: [full current M3 report](M3_STATUS.md); the earlier Ellis report
 is historical. Metal rendering and user animation review remain pending. Not accepted.
 
-### M3.3 — Vector Fields — NOT STARTED
+### M3.3 — Vector Fields — IMPLEMENTED ON DRAFT STACK, UI PENDING
 
-M3.2 is now explicitly authorized. No M3.3 or later milestone work is included. Timeline/keyframes,
+2026-11-13 roadmap request authorizes the independent/explicitly stacked sequence:
+M3.2 verification → UX-01 → M4.1 → M3.3. Four parameterized 2D fields and Euler/RK4
+trajectories are implemented on `feature/m3-3-vector-fields`, with numerical/build evidence
+in `evidence/m3-3/README.md`. Native-window access blocks visual review; not accepted.
+
+The earlier M3.2-only scope is superseded by the explicitly authorized 2026-11-13 roadmap sequence. Timeline/keyframes,
 formula editing, Black–Scholes, KKT, export and project persistence remain outside this slice.
 
 ### M3 completion checklist
@@ -60,7 +65,18 @@ formula editing, Black–Scholes, KKT, export and project persistence remain out
 
 These are the explicitly known M3 slices. No later milestone numbering or scope is changed.
 
-## M4 — Optimization foundations
+## UX-01 — Library and Workspace — PR 2, REVIEW PENDING
+
+Searchable categorized navigation beside the workspace; existing experiments/live previews retained.
+Actual native search/navigation screenshots recorded; compact/full Xcode review pending.
+
+## M4.1 — Optimization Foundations — DRAFT PR 3, UI PENDING
+
+Five objective families, analytic derivatives, safeguarded gradient descent/momentum/Newton,
+level sets, trajectories and diagnostics. Explicit stack on UX-01. Numerical/build checks passed;
+native window inspection blocked. See `evidence/m4-1/README.md`; no acceptance claim.
+
+## M4 — Optimization foundations (historical outline)
 Deliver: function plotting/sampling, contour/surface, start point drag, gradient descent and Newton, step mode and solver metrics, Art/Analysis views. Evidence: solver unit tests on quadratics and Rosenbrock, mathematical annotation checks.
 
 ## M5 — Expression editor and advanced optimization
