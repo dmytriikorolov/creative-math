@@ -1,0 +1,18 @@
+warning: /Users/dima/Library/org.swift.swiftpm/configuration is not accessible or not writable, disabling user-level cache features.
+warning: /Users/dima/Library/org.swift.swiftpm/security is not accessible or not writable, disabling user-level cache features.
+[0/1] Planning build
+Building for debugging...
+[0/4] Write swift-version--1AB21518FC5DEDBE.txt
+[2/6] Emitting module WorkspaceCore
+[3/6] Compiling WorkspaceCore PanelPlacement.swift
+[4/12] Compiling CreativeMath Design.swift
+[5/12] Compiling CreativeMath WorkspaceView.swift
+[6/12] Compiling CreativeMath PanelMouseRegion.swift
+[7/12] Compiling CreativeMath CreativeMathApp.swift
+[8/12] Emitting module CreativeMath
+[9/12] Compiling CreativeMath MetalViewport.swift
+[9/11] Linking CreativeMath
+[10/11] Applying CreativeMath
+Build complete! (40.60s)
+/private/tmp//creative-math-build/Creative Math.app: replacing existing signature
+/private/tmp//creative-math-build/Creative Math.app

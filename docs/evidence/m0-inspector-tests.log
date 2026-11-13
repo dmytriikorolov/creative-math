@@ -1,0 +1,60 @@
+warning: /Users/dima/Library/org.swift.swiftpm/configuration is not accessible or not writable, disabling user-level cache features.
+warning: /Users/dima/Library/org.swift.swiftpm/security is not accessible or not writable, disabling user-level cache features.
+[0/1] Planning build
+Building for debugging...
+[0/5] Write sources
+[1/5] Write swift-version--1AB21518FC5DEDBE.txt
+[3/6] Compiling CreativeMath PanelMouseRegion.swift
+[4/6] Emitting module CreativeMath
+[4/7] Write Objects.LinkFileList
+[5/7] Linking CreativeMath
+[6/7] Applying CreativeMath
+Build complete! (1.40s)
+◇ Test run started.
+↳ Testing Library Version: 1902
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Test invalidFrameRecoversToFiniteDefault() started.
+◇ Test dragUsesInitialFrameAndTotalTranslation() started.
+◇ Test oppositeMagnetsDoNotOverlapWhenPanelNearlyFillsWorkspace() started.
+◇ Test resizeFollowsPointerWithoutAccumulatingDeltas() started.
+◇ Test magneticAttractionIsSymmetricForAllEdges() started.
+◇ Test resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test magneticAttractionIsContinuousAndMonotonic() started.
+◇ Test preferencesRoundTripPositionAndDimensions() started.
+◇ Test dragClampsAtEveryBoundary() started.
+◇ Test clampingFitsSmallerWorkspaceAndIsIdempotent() started.
+◇ Test repeatedDragStartsAtDisplayedFrameAndFollowsPointerDirection() started.
+◇ Test resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test defaultSizeRestorationKeepsPositionWhenPossible() started.
+◇ Test preferencesMigrateExistingPositionAndDefaultMissingDimensions() started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 1) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 1) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 4) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 8) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 2) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 5) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 6) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 9) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 2) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 10) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 6) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 4) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 9) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 8) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 5) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 10) to resizeKeepsOppositeEdgesFixed(edges:) started.
+✔ Test magneticAttractionIsSymmetricForAllEdges() passed after 0.002 seconds.
+✔ Test resizeFollowsPointerWithoutAccumulatingDeltas() passed after 0.002 seconds.
+✔ Test invalidFrameRecoversToFiniteDefault() passed after 0.002 seconds.
+✔ Test dragUsesInitialFrameAndTotalTranslation() passed after 0.001 seconds.
+✔ Test repeatedDragStartsAtDisplayedFrameAndFollowsPointerDirection() passed after 0.001 seconds.
+✔ Test dragClampsAtEveryBoundary() passed after 0.001 seconds.
+✔ Test clampingFitsSmallerWorkspaceAndIsIdempotent() passed after 0.002 seconds.
+✔ Test magneticAttractionIsContinuousAndMonotonic() passed after 0.002 seconds.
+✔ Test defaultSizeRestorationKeepsPositionWhenPossible() passed after 0.001 seconds.
+✔ Test resizeKeepsOppositeEdgesFixed(edges:) with 8 test cases passed after 0.002 seconds.
+✔ Test resizeHonorsLimitsAndWorkspace(edges:) with 8 test cases passed after 0.002 seconds.
+✔ Test oppositeMagnetsDoNotOverlapWhenPanelNearlyFillsWorkspace() passed after 0.002 seconds.
+✔ Test preferencesRoundTripPositionAndDimensions() passed after 0.005 seconds.
+✔ Test preferencesMigrateExistingPositionAndDefaultMissingDimensions() passed after 0.005 seconds.
+✔ Test run with 14 tests in 0 suites passed after 0.005 seconds.

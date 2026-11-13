@@ -1,0 +1,27 @@
+warning: /Users/dima/Library/org.swift.swiftpm/configuration is not accessible or not writable, disabling user-level cache features.
+warning: /Users/dima/Library/org.swift.swiftpm/security is not accessible or not writable, disabling user-level cache features.
+[0/1] Planning build
+Building for debugging...
+[0/6] Write sources
+[1/6] Write swift-version--1AB21518FC5DEDBE.txt
+[3/8] Emitting module WorkspaceCore
+[4/8] Compiling WorkspaceCore PanelPlacement.swift
+[5/12] Compiling CreativeMath MetalViewport.swift
+[6/12] Compiling CreativeMath CreativeMathApp.swift
+[7/12] Compiling CreativeMath WorkspaceView.swift
+[8/12] Compiling CreativeMath Design.swift
+[9/12] Emitting module CreativeMath
+[9/12] Write Objects.LinkFileList
+[10/12] Linking CreativeMath
+[11/12] Applying CreativeMath
+Build complete! (2.24s)
+◇ Test run started.
+↳ Testing Library Version: 1902
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Test defaultPlacementFitsBaselineAndCompactWorkspaces() started.
+◇ Test clampsAfterResizeAndHandlesSmallWorkspace() started.
+◇ Test snapsAtThresholdButLeavesInteriorUntouched() started.
+✔ Test clampsAfterResizeAndHandlesSmallWorkspace() passed after 0.001 seconds.
+✔ Test defaultPlacementFitsBaselineAndCompactWorkspaces() passed after 0.001 seconds.
+✔ Test snapsAtThresholdButLeavesInteriorUntouched() passed after 0.001 seconds.
+✔ Test run with 3 tests in 0 suites passed after 0.001 seconds.

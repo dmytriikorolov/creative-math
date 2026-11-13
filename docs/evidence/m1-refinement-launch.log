@@ -1,0 +1,3 @@
+/private/tmp/creative-math-build/Creative Math.app: valid on disk
+/private/tmp/creative-math-build/Creative Math.app: satisfies its Designated Requirement
+The application cannot be opened for an unexpected reason, error=Error Domain=NSOSStatusErrorDomain Code=-10827 "kLSNoExecutableErr: The executable is missing" UserInfo={_LSLine=4277, _LSFunction=_LSOpenStuffCallLocal, _LSFile=LSOpenCore.mm, _LSErrorMessage=kLSNoExecutableErr}

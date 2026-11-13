@@ -1,0 +1,13 @@
+warning: /Users/dima/Library/org.swift.swiftpm/configuration is not accessible or not writable, disabling user-level cache features.
+warning: /Users/dima/Library/org.swift.swiftpm/security is not accessible or not writable, disabling user-level cache features.
+[0/1] Planning build
+Building for production...
+[0/3] Write sources
+[1/3] Write swift-version--1AB21518FC5DEDBE.txt
+[3/4] Compiling LorenzMetal LorenzGPU.swift
+[3/6] Write sources
+[5/7] Compiling LorenzValidation main.swift
+[5/7] Write Objects.LinkFileList
+[6/7] Linking LorenzValidation
+Build of product 'LorenzValidation' complete! (2.98s)
+NOT VERIFIED: Metal is unavailable in this session.

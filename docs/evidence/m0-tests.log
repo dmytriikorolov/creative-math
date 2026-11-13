@@ -1,0 +1,25 @@
+Another instance of SwiftPM (PID: 27559) is already running using '/private/tmp/creative-math-build', waiting until that process has finished execution...warning: /Users/dima/Library/org.swift.swiftpm/configuration is not accessible or not writable, disabling user-level cache features.
+warning: /Users/dima/Library/org.swift.swiftpm/security is not accessible or not writable, disabling user-level cache features.
+[0/1] Planning build
+Building for debugging...
+[0/5] Write swift-version--1AB21518FC5DEDBE.txt
+[2/7] Compiling WorkspaceCore PanelPlacement.swift
+[3/7] Emitting module WorkspaceCore
+[4/11] Emitting module CreativeMath
+[5/11] Compiling CreativeMath CreativeMathApp.swift
+[6/11] Compiling CreativeMath WorkspaceView.swift
+[7/11] Compiling CreativeMath Design.swift
+[8/11] Compiling CreativeMath MetalViewport.swift
+[8/10] Linking CreativeMath
+[9/10] Applying CreativeMath
+Build complete! (1.65s)
+◇ Test run started.
+↳ Testing Library Version: 1902
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Test clampsAfterResizeAndHandlesSmallWorkspace() started.
+◇ Test defaultPlacementFitsBaselineAndCompactWorkspaces() started.
+◇ Test snapsAtThresholdButLeavesInteriorUntouched() started.
+✔ Test defaultPlacementFitsBaselineAndCompactWorkspaces() passed after 0.001 seconds.
+✔ Test snapsAtThresholdButLeavesInteriorUntouched() passed after 0.001 seconds.
+✔ Test clampsAfterResizeAndHandlesSmallWorkspace() passed after 0.001 seconds.
+✔ Test run with 3 tests in 0 suites passed after 0.001 seconds.

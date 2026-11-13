@@ -1,0 +1,31 @@
+Node: SurfaceMotionSession
+  ID:        sources_creativemath_surfacemotionsession_surfacemotionsession
+  Source:    Sources/CreativeMath/SurfaceMotionSession.swift L5
+  Type:      code
+  Community: SurfaceMotionSession
+  Degree:    33
+
+Connections (33):
+  <-- WormholeSession [inherits] [EXTRACTED] Sources/CreativeMath/WormholeSession.swift:L6
+  --> EllisWormhole [references] [EXTRACTED] Sources/CreativeMath/SurfaceMotionSession.swift:L34
+  <-- GeodesicSession [inherits] [EXTRACTED] Sources/CreativeMath/GeodesicSession.swift:L5
+  <-- WorkspaceView [references] [EXTRACTED] Sources/CreativeMath/WorkspaceView.swift:L17
+  <-- SurfaceViewRenderer [references] [EXTRACTED] Sources/CreativeMath/SurfaceViewport.swift:L49
+  <-- SurfaceViewport [references] [EXTRACTED] Sources/CreativeMath/SurfaceViewport.swift:L9
+  --> GeodesicRenderTrack [references] [EXTRACTED] Sources/CreativeMath/SurfaceMotionSession.swift:L30
+  --> WormholeSurfaceAppearance [references] [EXTRACTED] Sources/CreativeMath/SurfaceMotionSession.swift:L35
+  <-- FocusedValues [references] [EXTRACTED] Sources/CreativeMath/CreativeMathApp.swift:L31
+  <-- .makeNSView() [references] [INFERRED 0.85] Sources/CreativeMath/SurfaceViewport.swift:L29
+  <-- GeodesicAxisLabels [references] [EXTRACTED] Sources/CreativeMath/SurfaceViewport.swift:L156
+  <-- .init() [references] [EXTRACTED] Sources/CreativeMath/SurfaceViewport.swift:L58
+  --> .advance() [method] [EXTRACTED] Sources/CreativeMath/SurfaceMotionSession.swift:L21
+  --> .cameraForFrame() [method] [EXTRACTED] Sources/CreativeMath/SurfaceMotionSession.swift:L25
+  --> .recordAnnotationCamera() [method] [EXTRACTED] Sources/CreativeMath/SurfaceMotionSession.swift:L26
+  --> Double [references] [EXTRACTED] Sources/CreativeMath/SurfaceMotionSession.swift:L32
+  --> .updateDiagnostics() [method] [EXTRACTED] Sources/CreativeMath/SurfaceMotionSession.swift:L27
+  <-- SurfaceMotionSession.swift [contains] [EXTRACTED] Sources/CreativeMath/SurfaceMotionSession.swift:L29
+  --> Int [references] [EXTRACTED] Sources/CreativeMath/SurfaceMotionSession.swift:L31
+  --> SIMD3 [references] [EXTRACTED] Sources/CreativeMath/SurfaceMotionSession.swift:L32
+  ... and 13 more (--all lists all 33)
+  Grouped by file:
+    --> Sources/CreativeMath/SurfaceMotionSession.swift: 13 connections

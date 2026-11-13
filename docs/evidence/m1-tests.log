@@ -1,0 +1,82 @@
+warning: /Users/dima/Library/org.swift.swiftpm/configuration is not accessible or not writable, disabling user-level cache features.
+warning: /Users/dima/Library/org.swift.swiftpm/security is not accessible or not writable, disabling user-level cache features.
+[0/1] Planning build
+Building for debugging...
+[0/7] Write sources
+[1/7] Write swift-version--1AB21518FC5DEDBE.txt
+[3/8] Emitting module CreativeMath
+[4/8] Compiling CreativeMath LorenzInspector.swift
+[5/8] Compiling CreativeMath CreativeMathApp.swift
+[6/8] Compiling CreativeMath WorkspaceView.swift
+[6/9] Write Objects.LinkFileList
+[7/9] Linking CreativeMath
+[8/9] Applying CreativeMath
+Build complete! (41.73s)
+◇ Test run started.
+↳ Testing Library Version: 1902
+↳ Target Platform: arm64e-apple-macos14.0
+➜ Test gpuRecoversFromNonFiniteInputWithoutConnectingOldTrail() skipped: "Metal device unavailable; divergence recovery NOT RUN"
+◇ Test oppositeMagnetsDoNotOverlapWhenPanelNearlyFillsWorkspace() started.
+➜ Test gpuMatchesCPUReferenceAndResets() skipped: "Metal device unavailable; GPU parity NOT RUN"
+◇ Test seededResetAndBatchingAreRepeatable() started.
+◇ Test magneticAttractionIsSymmetricForAllEdges() started.
+◇ Test cameraProjectionPreservesAxesDepthAndAspect() started.
+◇ Test supportedParameterCornersRemainFinite() started.
+◇ Test clampingFitsSmallerWorkspaceAndIsIdempotent() started.
+◇ Test resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test parameterValidationAndStableReference() started.
+◇ Test defaultSizeRestorationKeepsPositionWhenPossible() started.
+◇ Test magneticAttractionIsContinuousAndMonotonic() started.
+◇ Test dragClampsAtEveryBoundary() started.
+◇ Test clockIsRefreshIndependentAndPauseDoesNotAccumulate() started.
+◇ Test invalidFrameRecoversToFiniteDefault() started.
+◇ Test resizeFollowsPointerWithoutAccumulatingDeltas() started.
+◇ Test resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test rk4MatchesIndependentDOP853AndConverges() started.
+◇ Test dragUsesInitialFrameAndTotalTranslation() started.
+◇ Test clockBoundsCatchupAndValidatesSpeed() started.
+◇ Test preferencesRoundTripPositionAndDimensions() started.
+◇ Test preferencesMigrateExistingPositionAndDefaultMissingDimensions() started.
+◇ Test repeatedDragStartsAtDisplayedFrameAndFollowsPointerDirection() started.
+◇ Test cameraLimitsAndSimulationIndependence() started.
+◇ Test lorenzDerivativeAndEquilibria() started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 4) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 1) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 1) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 2) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 8) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 2) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 6) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 4) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 5) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 9) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 5) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 8) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 10) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 9) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 6) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 10) to resizeKeepsOppositeEdgesFixed(edges:) started.
+✔ Test magneticAttractionIsSymmetricForAllEdges() passed after 0.002 seconds.
+✔ Test defaultSizeRestorationKeepsPositionWhenPossible() passed after 0.002 seconds.
+✔ Test clampingFitsSmallerWorkspaceAndIsIdempotent() passed after 0.002 seconds.
+✔ Test dragClampsAtEveryBoundary() passed after 0.002 seconds.
+✔ Test invalidFrameRecoversToFiniteDefault() passed after 0.002 seconds.
+✔ Test resizeFollowsPointerWithoutAccumulatingDeltas() passed after 0.002 seconds.
+✔ Test magneticAttractionIsContinuousAndMonotonic() passed after 0.002 seconds.
+✔ Test resizeHonorsLimitsAndWorkspace(edges:) with 8 test cases passed after 0.002 seconds.
+✔ Test resizeKeepsOppositeEdgesFixed(edges:) with 8 test cases passed after 0.002 seconds.
+✔ Test clockIsRefreshIndependentAndPauseDoesNotAccumulate() passed after 0.002 seconds.
+✔ Test dragUsesInitialFrameAndTotalTranslation() passed after 0.002 seconds.
+✔ Test clockBoundsCatchupAndValidatesSpeed() passed after 0.002 seconds.
+✔ Test cameraLimitsAndSimulationIndependence() passed after 0.002 seconds.
+✔ Test rk4MatchesIndependentDOP853AndConverges() passed after 0.002 seconds.
+✔ Test lorenzDerivativeAndEquilibria() passed after 0.002 seconds.
+✔ Test cameraProjectionPreservesAxesDepthAndAspect() passed after 0.002 seconds.
+✔ Test repeatedDragStartsAtDisplayedFrameAndFollowsPointerDirection() passed after 0.002 seconds.
+✔ Test oppositeMagnetsDoNotOverlapWhenPanelNearlyFillsWorkspace() passed after 0.003 seconds.
+✔ Test preferencesRoundTripPositionAndDimensions() passed after 0.007 seconds.
+✔ Test preferencesMigrateExistingPositionAndDefaultMissingDimensions() passed after 0.007 seconds.
+✔ Test seededResetAndBatchingAreRepeatable() passed after 0.009 seconds.
+✔ Test supportedParameterCornersRemainFinite() passed after 0.017 seconds.
+✔ Test parameterValidationAndStableReference() passed after 0.022 seconds.
+✔ Test run with 25 tests in 0 suites passed after 0.022 seconds.

@@ -1,0 +1,18 @@
+warning: /Users/dima/Library/org.swift.swiftpm/configuration is not accessible or not writable, disabling user-level cache features.
+warning: /Users/dima/Library/org.swift.swiftpm/security is not accessible or not writable, disabling user-level cache features.
+[0/1] Planning build
+Building for production...
+[0/5] Write sources
+[2/5] Write swift-version--1AB21518FC5DEDBE.txt
+[4/6] Compiling WorkspaceCore CameraProjection.swift
+[5/7] Compiling LorenzMetal LorenzGPU.swift
+[6/8] Compiling LorenzValidation main.swift
+[6/8] Write Objects.LinkFileList
+[7/8] Linking LorenzValidation
+Build of product 'LorenzValidation' complete! (5.00s)
+Usage: validate-lorenz.sh [--preset classic|filament|sculpture]
+  [--representation line|ribbon] [--seconds 0...7200]
+  [--width 64...4096] [--height 64...4096] [--output report.json]
+Without --seconds: parity only. With positive --seconds: parity, then a timed
+offscreen benchmark. JSON is written only after completion. --output requires
+a positive duration and an existing parent directory. No separate tool needed.

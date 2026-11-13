@@ -1,0 +1,174 @@
+warning: /Users/dima/Library/org.swift.swiftpm/configuration is not accessible or not writable, disabling user-level cache features.
+warning: /Users/dima/Library/org.swift.swiftpm/security is not accessible or not writable, disabling user-level cache features.
+[0/1] Planning build
+Building for debugging...
+[0/9] Write sources
+[3/9] Write swift-version--1AB21518FC5DEDBE.txt
+[5/11] Compiling WorkspaceCore CameraProjection.swift
+[6/11] Emitting module WorkspaceCore
+[7/17] Emitting module LorenzMetal
+[8/17] Compiling SurfaceMetal SurfaceRenderer.swift
+[9/18] Emitting module SurfaceMetal
+[10/18] Compiling SurfaceMetal GeodesicTrails.swift
+[11/18] Emitting module WorkspaceCoreTests
+[12/18] Emitting module LorenzValidation
+[12/21] Write Objects.LinkFileList
+[13/23] Linking LorenzValidation
+[14/23] Applying LorenzValidation
+[16/23] Emitting module LorenzMetalTests
+[17/23] Compiling LorenzMetalTests SurfaceRendererTests.swift
+[18/23] Compiling LorenzMetalTests GeodesicRenderingTests.swift
+[18/24] Write Objects.LinkFileList
+[20/24] Emitting module CreativeMath
+[21/24] Compiling CreativeMath SurfaceViewport.swift
+[21/25] Write Objects.LinkFileList
+[22/25] Linking CreativeMathPackageTests
+[23/25] Linking CreativeMath
+[24/25] Applying CreativeMath
+Build complete! (2.29s)
+◇ Test run started.
+↳ Testing Library Version: 1902
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Test equatorialGeodesicsTraceActualCirclesOverMultipleLaps() started.
+➜ Test geodesicOverlayPreservesSurfaceDepthAndFrozenHistory() skipped: "Metal unavailable; geodesic raster/depth/frozen trail NOT RUN"
+◇ Test seededResetAndBatchingAreRepeatable() started.
+◇ Test geodesicPauseFreezesTrailAgeAndStepAgesExactlyOnce() started.
+➜ Test gpuRingContentsAndPresetTransitions() skipped: "Metal unavailable; ring history and preset transitions NOT RUN"
+◇ Test surfaceCameraProjectionMatchesExistingLorenzConvention() started.
+◇ Test cameraProjectionPreservesAxesDepthAndAspect() started.
+◇ Test dragUsesInitialFrameAndTotalTranslation() started.
+◇ Test equilibriumIsInvariantAndZAxisMatchesAnalyticDecay() started.
+◇ Test fadeDrawRangeNeverOmitsANonzeroEndpoint() started.
+◇ Test cameraCanFocusATargetWithoutChangingExistingZoomLimits() started.
+◇ Test magneticAttractionIsContinuousAndMonotonic() started.
+◇ Test clampingFitsSmallerWorkspaceAndIsIdempotent() started.
+◇ Test preferencesMigrateExistingPositionAndDefaultMissingDimensions() started.
+◇ Test dragClampsAtEveryBoundary() started.
+◇ Test pauseFreezesSimulationAgeAndSingleStepAdvancesIt() started.
+◇ Test cameraLimitsAndSimulationIndependence() started.
+➜ Test gpuMatchesCPUReferenceAndResets() skipped: "Metal device unavailable; GPU parity NOT RUN"
+➜ Test gpuRibbonFramesPreserveMathRenderAndFreezeWhenPaused() skipped: "Metal unavailable; ribbon rendering and frozen-aging verification NOT RUN"
+➜ Test surfaceRendererDrawsBothPresetsAndReusesUnchangedMeshes() skipped: "Metal unavailable; surface raster and resource validation NOT RUN"
+◇ Test clockBoundsCatchupAndValidatesSpeed() started.
+◇ Test periodicWrappingAndSeamsRemainGeometricallyContinuous() started.
+◇ Test validationRejectsEveryNonFiniteModelComponentAndCountBoundary() started.
+◇ Test packedTransportStaysStableAlongLorenzTrajectory() started.
+◇ Test resizeFollowsPointerWithoutAccumulatingDeltas() started.
+◇ Test invalidGeodesicInputsAreRejected() started.
+◇ Test wormholeHasOpenThroatFixedRimAndContinuousFlatLimit() started.
+➜ Test gpuStableDynamicsSettleWithoutRestarting() skipped: "Metal unavailable; stable GPU equilibria NOT RUN"
+➜ Test gpuRecoversFromNonFiniteInputWithoutConnectingOldTrail() skipped: "Metal device unavailable; divergence recovery NOT RUN"
+◇ Test launchIsNormalizedInTheMetricAtEveryPosition() started.
+◇ Test clockAccountsForDroppedTimeAndPreservesFractionalPhase() started.
+◇ Test resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test oppositeMagnetsDoNotOverlapWhenPanelNearlyFillsWorkspace() started.
+◇ Test magneticAttractionIsSymmetricForAllEdges() started.
+◇ Test fadeZeroDurationInvalidInputsAndHistoryLimits() started.
+◇ Test transportedRibbonFramesHandlePolesReversalsAndInvalidTangents() started.
+◇ Test geodesicClockIsIndependentOfDisplayRefresh() started.
+◇ Test clockIsRefreshIndependentAndPauseDoesNotAccumulate() started.
+◇ Test fadeDelayDurationAndSmoothBoundaries() started.
+◇ Test preferencesRoundTripPositionAndDimensions() started.
+◇ Test integrationRestartBatchingAndRingHistoryAreDeterministic() started.
+◇ Test parameterValidationAndStableReference() started.
+◇ Test lorenzDerivativeAndEquilibria() started.
+◇ Test torusMetricAndAccelerationMatchGeometry() started.
+◇ Test invalidFrameRecoversToFiniteDefault() started.
+◇ Test repeatedDragStartsAtDisplayedFrameAndFollowsPointerDirection() started.
+◇ Test analyticSurfaceNormalsAreOrthogonalToFiniteDifferenceTangents() started.
+◇ Test nearbyInnerEquatorIsNotArtificiallyLockedAndFloatTrailStaysOnSurface() started.
+◇ Test rk4MatchesIndependentDOP853AndConverges() started.
+◇ Test defaultSizeRestorationKeepsPositionWhenPossible() started.
+◇ Test meshBoundsSeamsAndParameterValidation() started.
+◇ Test coordinateGridIsBoundedAndContainsAxesAndTicks() started.
+◇ Test meridiansAndSupportedRadiusCornersStayFinite() started.
+◇ Test stableDynamicsConvergeWithoutRecoveryOrForcedMotion() started.
+◇ Test presetRepresentationsAndAppearanceLimits() started.
+◇ Test packedRibbonFramesAreFiniteAndKeepPrecision() started.
+◇ Test particleAndTrailAppearanceValidateScreenPointRanges() started.
+◇ Test rk4GeodesicsConvergeWhenTimestepIsHalved() started.
+◇ Test benchmarkCLIRejectsSilentNoOutputAndUnknownOptions() started.
+◇ Test torusSamplesSatisfyImplicitSurfaceAndPeriodicSeams() started.
+◇ Test playbackMultiplierChangesRateWithoutRestartOrLargerSteps() started.
+◇ Test supportedParameterCornersRemainFinite() started.
+◇ Test extendedGeodesicsStayFiniteOnSurfaceWithMeasuredDrift() started.
+◇ Test resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 1) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 2) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 4) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 8) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 5) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 6) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 9) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 10) to resizeKeepsOppositeEdgesFixed(edges:) started.
+✔ Test fadeDrawRangeNeverOmitsANonzeroEndpoint() passed after 0.024 seconds.
+✔ Test geodesicPauseFreezesTrailAgeAndStepAgesExactlyOnce() passed after 0.025 seconds.
+✔ Test clampingFitsSmallerWorkspaceAndIsIdempotent() passed after 0.027 seconds.
+✔ Test dragClampsAtEveryBoundary() passed after 0.029 seconds.
+✔ Test dragUsesInitialFrameAndTotalTranslation() passed after 0.029 seconds.
+✔ Test pauseFreezesSimulationAgeAndSingleStepAdvancesIt() passed after 0.029 seconds.
+✔ Test equilibriumIsInvariantAndZAxisMatchesAnalyticDecay() passed after 0.038 seconds.
+✔ Test clockBoundsCatchupAndValidatesSpeed() passed after 0.038 seconds.
+◇ Test case passing 1 argument edges → Edges(rawValue: 1) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 2) to resizeHonorsLimitsAndWorkspace(edges:) started.
+✔ Test cameraLimitsAndSimulationIndependence() passed after 0.038 seconds.
+◇ Test case passing 1 argument edges → Edges(rawValue: 4) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 8) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 5) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 6) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 9) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 10) to resizeHonorsLimitsAndWorkspace(edges:) started.
+✔ Test validationRejectsEveryNonFiniteModelComponentAndCountBoundary() passed after 0.038 seconds.
+✔ Test resizeFollowsPointerWithoutAccumulatingDeltas() passed after 0.038 seconds.
+✔ Test magneticAttractionIsContinuousAndMonotonic() passed after 0.038 seconds.
+✔ Test launchIsNormalizedInTheMetricAtEveryPosition() passed after 0.038 seconds.
+✔ Test clockAccountsForDroppedTimeAndPreservesFractionalPhase() passed after 0.038 seconds.
+✔ Test resizeKeepsOppositeEdgesFixed(edges:) with 8 test cases passed after 0.038 seconds.
+✔ Test magneticAttractionIsSymmetricForAllEdges() passed after 0.038 seconds.
+✔ Test wormholeHasOpenThroatFixedRimAndContinuousFlatLimit() passed after 0.038 seconds.
+✔ Test invalidGeodesicInputsAreRejected() passed after 0.038 seconds.
+✔ Test fadeZeroDurationInvalidInputsAndHistoryLimits() passed after 0.038 seconds.
+✔ Test transportedRibbonFramesHandlePolesReversalsAndInvalidTangents() passed after 0.038 seconds.
+✔ Test oppositeMagnetsDoNotOverlapWhenPanelNearlyFillsWorkspace() passed after 0.038 seconds.
+✔ Test clockIsRefreshIndependentAndPauseDoesNotAccumulate() passed after 0.038 seconds.
+✔ Test fadeDelayDurationAndSmoothBoundaries() passed after 0.038 seconds.
+✔ Test seededResetAndBatchingAreRepeatable() passed after 0.038 seconds.
+✔ Test lorenzDerivativeAndEquilibria() passed after 0.038 seconds.
+✔ Test torusMetricAndAccelerationMatchGeometry() passed after 0.038 seconds.
+✔ Test preferencesMigrateExistingPositionAndDefaultMissingDimensions() passed after 0.038 seconds.
+✔ Test invalidFrameRecoversToFiniteDefault() passed after 0.038 seconds.
+✔ Test repeatedDragStartsAtDisplayedFrameAndFollowsPointerDirection() passed after 0.038 seconds.
+✔ Test analyticSurfaceNormalsAreOrthogonalToFiniteDifferenceTangents() passed after 0.038 seconds.
+✔ Test periodicWrappingAndSeamsRemainGeometricallyContinuous() passed after 0.038 seconds.
+✔ Test rk4MatchesIndependentDOP853AndConverges() passed after 0.038 seconds.
+✔ Test defaultSizeRestorationKeepsPositionWhenPossible() passed after 0.038 seconds.
+✔ Test coordinateGridIsBoundedAndContainsAxesAndTicks() passed after 0.038 seconds.
+✔ Test preferencesRoundTripPositionAndDimensions() passed after 0.038 seconds.
+✔ Test packedTransportStaysStableAlongLorenzTrajectory() passed after 0.038 seconds.
+✔ Test integrationRestartBatchingAndRingHistoryAreDeterministic() passed after 0.038 seconds.
+✔ Test presetRepresentationsAndAppearanceLimits() passed after 0.038 seconds.
+✔ Test meshBoundsSeamsAndParameterValidation() passed after 0.038 seconds.
+✔ Test surfaceCameraProjectionMatchesExistingLorenzConvention() passed after 0.039 seconds.
+✔ Test particleAndTrailAppearanceValidateScreenPointRanges() passed after 0.038 seconds.
+✔ Test cameraProjectionPreservesAxesDepthAndAspect() passed after 0.039 seconds.
+✔ Test cameraCanFocusATargetWithoutChangingExistingZoomLimits() passed after 0.039 seconds.
+✔ Test nearbyInnerEquatorIsNotArtificiallyLockedAndFloatTrailStaysOnSurface() passed after 0.038 seconds.
+✔ Test benchmarkCLIRejectsSilentNoOutputAndUnknownOptions() passed after 0.038 seconds.
+✔ Test packedRibbonFramesAreFiniteAndKeepPrecision() passed after 0.038 seconds.
+✔ Test torusSamplesSatisfyImplicitSurfaceAndPeriodicSeams() passed after 0.038 seconds.
+✔ Test parameterValidationAndStableReference() passed after 0.038 seconds.
+✔ Test geodesicClockIsIndependentOfDisplayRefresh() passed after 0.038 seconds.
+✔ Test resizeHonorsLimitsAndWorkspace(edges:) with 8 test cases passed after 0.037 seconds.
+✔ Test playbackMultiplierChangesRateWithoutRestartOrLargerSteps() passed after 0.038 seconds.
+GEODESIC_CONVERGENCE time=12s errors h=.1,.05,.025: 9.047971280234082e-05, 4.718958953247797e-06, 2.671304946316368e-07; ratios 19.173659635261007, 17.665369727836836
+✔ Test rk4GeodesicsConvergeWhenTimestepIsHalved() passed after 0.039 seconds.
+✔ Test supportedParameterCornersRemainFinite() passed after 0.048 seconds.
+GEODESIC_EQUATOR v=0.0 time=100s maximum world error=2.6912118663032877e-12
+GEODESIC_EQUATOR v=3.141592653589793 time=100s maximum world error=6.59731638189932e-12
+✔ Test equatorialGeodesicsTraceActualCirclesOverMultipleLaps() passed after 0.136 seconds.
+✔ Test stableDynamicsConvergeWithoutRecoveryOrForcedMotion() passed after 0.187 seconds.
+✔ Test meridiansAndSupportedRadiusCornersStayFinite() passed after 0.323 seconds.
+GEODESIC_DRIFT R=6.0 r=2.0 speed=4.0 duration=1000s dt=0.004166666666666667 max relative speed=8.447242905162966e-12 momentum=6.36612984550311e-12 constraint=7.993605777301127e-15
+GEODESIC_DRIFT R=4.0 r=3.0 speed=8.0 duration=1000s dt=0.004166666666666667 max relative speed=3.1652036547313855e-10 momentum=3.989548691407663e-10 constraint=1.0658141036401503e-14
+✔ Test extendedGeodesicsStayFiniteOnSurfaceWithMeasuredDrift() passed after 0.972 seconds.
+✔ Test run with 64 tests in 0 suites passed after 0.974 seconds.

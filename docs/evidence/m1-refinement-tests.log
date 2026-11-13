@@ -1,0 +1,94 @@
+warning: /Users/dima/Library/org.swift.swiftpm/configuration is not accessible or not writable, disabling user-level cache features.
+warning: /Users/dima/Library/org.swift.swiftpm/security is not accessible or not writable, disabling user-level cache features.
+[0/1] Planning build
+Building for debugging...
+[0/7] Write sources
+[1/7] Write swift-version--1AB21518FC5DEDBE.txt
+[3/5] Compiling LorenzMetalTests LorenzGPUTests.swift
+[4/5] Emitting module LorenzMetalTests
+[4/6] Write Objects.LinkFileList
+[5/6] Linking CreativeMathPackageTests
+Build complete! (1.58s)
+◇ Test run started.
+↳ Testing Library Version: 1902
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Test resizeHonorsLimitsAndWorkspace(edges:) started.
+➜ Test gpuRibbonFramesPreserveMathRenderAndFreezeWhenPaused() skipped: "Metal unavailable; ribbon rendering and frozen-aging verification NOT RUN"
+◇ Test seededResetAndBatchingAreRepeatable() started.
+➜ Test gpuMatchesCPUReferenceAndResets() skipped: "Metal device unavailable; GPU parity NOT RUN"
+◇ Test dragUsesInitialFrameAndTotalTranslation() started.
+◇ Test cameraProjectionPreservesAxesDepthAndAspect() started.
+◇ Test transportedRibbonFramesHandlePolesReversalsAndInvalidTangents() started.
+◇ Test presetRepresentationsAndAppearanceLimits() started.
+◇ Test oppositeMagnetsDoNotOverlapWhenPanelNearlyFillsWorkspace() started.
+◇ Test cameraLimitsAndSimulationIndependence() started.
+➜ Test gpuRecoversFromNonFiniteInputWithoutConnectingOldTrail() skipped: "Metal device unavailable; divergence recovery NOT RUN"
+◇ Test fadeDelayDurationAndSmoothBoundaries() started.
+◇ Test pauseFreezesSimulationAgeAndSingleStepAdvancesIt() started.
+◇ Test magneticAttractionIsSymmetricForAllEdges() started.
+◇ Test packedTransportStaysStableAlongLorenzTrajectory() started.
+◇ Test magneticAttractionIsContinuousAndMonotonic() started.
+◇ Test dragClampsAtEveryBoundary() started.
+◇ Test supportedParameterCornersRemainFinite() started.
+◇ Test preferencesMigrateExistingPositionAndDefaultMissingDimensions() started.
+◇ Test preferencesRoundTripPositionAndDimensions() started.
+◇ Test lorenzDerivativeAndEquilibria() started.
+◇ Test clampingFitsSmallerWorkspaceAndIsIdempotent() started.
+◇ Test packedRibbonFramesAreFiniteAndKeepPrecision() started.
+◇ Test parameterValidationAndStableReference() started.
+◇ Test repeatedDragStartsAtDisplayedFrameAndFollowsPointerDirection() started.
+◇ Test resizeFollowsPointerWithoutAccumulatingDeltas() started.
+◇ Test clockBoundsCatchupAndValidatesSpeed() started.
+◇ Test clockIsRefreshIndependentAndPauseDoesNotAccumulate() started.
+◇ Test defaultSizeRestorationKeepsPositionWhenPossible() started.
+◇ Test invalidFrameRecoversToFiniteDefault() started.
+◇ Test rk4MatchesIndependentDOP853AndConverges() started.
+◇ Test resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 4) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 5) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 8) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 2) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 1) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 6) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 9) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test fadeZeroDurationInvalidInputsAndHistoryLimits() started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 10) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 1) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 2) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 4) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 8) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 5) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 6) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 9) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 10) to resizeKeepsOppositeEdgesFixed(edges:) started.
+✔ Test resizeHonorsLimitsAndWorkspace(edges:) with 8 test cases passed after 0.008 seconds.
+✔ Test dragUsesInitialFrameAndTotalTranslation() passed after 0.008 seconds.
+✔ Test pauseFreezesSimulationAgeAndSingleStepAdvancesIt() passed after 0.008 seconds.
+✔ Test dragClampsAtEveryBoundary() passed after 0.008 seconds.
+✔ Test presetRepresentationsAndAppearanceLimits() passed after 0.008 seconds.
+✔ Test magneticAttractionIsSymmetricForAllEdges() passed after 0.008 seconds.
+✔ Test magneticAttractionIsContinuousAndMonotonic() passed after 0.008 seconds.
+✔ Test transportedRibbonFramesHandlePolesReversalsAndInvalidTangents() passed after 0.008 seconds.
+✔ Test cameraLimitsAndSimulationIndependence() passed after 0.008 seconds.
+✔ Test lorenzDerivativeAndEquilibria() passed after 0.008 seconds.
+✔ Test clampingFitsSmallerWorkspaceAndIsIdempotent() passed after 0.008 seconds.
+✔ Test fadeDelayDurationAndSmoothBoundaries() passed after 0.008 seconds.
+✔ Test oppositeMagnetsDoNotOverlapWhenPanelNearlyFillsWorkspace() passed after 0.008 seconds.
+✔ Test repeatedDragStartsAtDisplayedFrameAndFollowsPointerDirection() passed after 0.008 seconds.
+✔ Test clockBoundsCatchupAndValidatesSpeed() passed after 0.008 seconds.
+✔ Test resizeFollowsPointerWithoutAccumulatingDeltas() passed after 0.008 seconds.
+✔ Test clockIsRefreshIndependentAndPauseDoesNotAccumulate() passed after 0.008 seconds.
+✔ Test defaultSizeRestorationKeepsPositionWhenPossible() passed after 0.008 seconds.
+✔ Test rk4MatchesIndependentDOP853AndConverges() passed after 0.008 seconds.
+✔ Test invalidFrameRecoversToFiniteDefault() passed after 0.008 seconds.
+✔ Test resizeKeepsOppositeEdgesFixed(edges:) with 8 test cases passed after 0.008 seconds.
+✔ Test cameraProjectionPreservesAxesDepthAndAspect() passed after 0.008 seconds.
+✔ Test seededResetAndBatchingAreRepeatable() passed after 0.008 seconds.
+✔ Test fadeZeroDurationInvalidInputsAndHistoryLimits() passed after 0.007 seconds.
+✔ Test preferencesMigrateExistingPositionAndDefaultMissingDimensions() passed after 0.008 seconds.
+✔ Test preferencesRoundTripPositionAndDimensions() passed after 0.009 seconds.
+✔ Test packedRibbonFramesAreFiniteAndKeepPrecision() passed after 0.009 seconds.
+✔ Test packedTransportStaysStableAlongLorenzTrajectory() passed after 0.015 seconds.
+✔ Test supportedParameterCornersRemainFinite() passed after 0.016 seconds.
+✔ Test parameterValidationAndStableReference() passed after 0.021 seconds.
+✔ Test run with 33 tests in 0 suites passed after 0.022 seconds.

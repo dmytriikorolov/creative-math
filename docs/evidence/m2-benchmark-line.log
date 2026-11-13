@@ -1,0 +1,8 @@
+warning: /Users/dima/Library/org.swift.swiftpm/configuration is not accessible or not writable, disabling user-level cache features.
+warning: /Users/dima/Library/org.swift.swiftpm/security is not accessible or not writable, disabling user-level cache features.
+[0/1] Planning build
+Building for production...
+[0/2] Write swift-version--1AB21518FC5DEDBE.txt
+Build of product 'LorenzValidation' complete! (0.16s)
+Mode: parity + offscreen benchmark (60.0 seconds).
+NOT VERIFIED: Metal is unavailable in this session.

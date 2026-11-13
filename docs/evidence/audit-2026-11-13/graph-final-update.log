@@ -1,0 +1,10 @@
+Updating code graph in . (no LLM needed)...
+[graphify watch] 80 file(s) not classified (no supported extension or shebang), skipped: .gitignore, AppIcon.icns, CreativeMath.xcscheme, Open Creative Math.command, app-icon-generation.log, build.log (+74 more)
+[graphify watch] warning: 80 of 185 files seen (43%) have no supported extractor and are missing from this graph entirely. It may look complete while representing only part of the codebase.
+[graphify watch] Incremental: re-extracting 13 of 105 scanned files that changed since the last build.
+  AST cache: 0/1 files served from cache (0%); 1 to extract
+[graphify watch] community set changed since labeling (0 saved labels, 55 communities now; renamed 16 community(ies) by their hub). Run `graphify label` to refresh names with the LLM.
+[graphify watch] Rebuilt: 954 nodes, 2308 edges, 55 communities
+[graphify watch] graph.json, graph.html and GRAPH_REPORT.md updated in graphify-out
+Code graph updated. For doc/paper/image changes run /graphify --update in your AI assistant.
+Tip: set GEMINI_API_KEY or GOOGLE_API_KEY to use Gemini for semantic extraction.
