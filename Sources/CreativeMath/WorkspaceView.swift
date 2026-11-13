@@ -3,6 +3,10 @@ import WorkspaceCore
 
 struct WorkspaceView: View {
     @State private var scene: WorkspaceScene?
+    @State private var libraryVisible = true
+    @State private var librarySearch = ""
+    @State private var libraryCategory = LibraryCategory.all
+    @FocusState private var librarySearchFocused: Bool
     @State private var inspectorVisible = true
     @State private var renderFailure: String?
     @State private var lorenz = LorenzSession()
@@ -20,7 +24,12 @@ struct WorkspaceView: View {
         return nil
     }
     var body: some View {
-        VStack(spacing: 0) {
+        HStack(spacing: 0) {
+            if libraryVisible {
+                experimentLibrary
+                Rectangle().fill(Design.border).frame(width: 1)
+            }
+            VStack(spacing: 0) {
             if let failure = renderFailure ?? activeMotion?.surface.failure ?? (scene == .lorenz ? lorenz.failure : (scene == .surface ? surface.failure : nil)) {
                 HStack {
                     Image(systemName: "exclamationmark.triangle")
@@ -38,6 +47,8 @@ struct WorkspaceView: View {
             } else {
                 gallery
             }
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         .frame(minWidth: 900, minHeight: 600)
         .background(Design.canvas)
@@ -49,12 +60,29 @@ struct WorkspaceView: View {
             if !visible { finishInteraction() }
         }
         .toolbar {
+            ToolbarItemGroup(placement: .navigation) {
+                Button {
+                    libraryVisible.toggle()
+                } label: {
+                    Label(libraryVisible ? "Hide Library" : "Show Library", systemImage: "sidebar.left")
+                }
+                .keyboardShortcut("l", modifiers: [.command, .shift])
+                .accessibilityIdentifier("libraryToggle")
+                Button {
+                    libraryVisible = true
+                    librarySearchFocused = true
+                } label: {
+                    Label("Search Experiments", systemImage: "magnifyingglass")
+                }
+                .keyboardShortcut("l", modifiers: .command)
+                .accessibilityIdentifier("librarySearchButton")
+            }
             ToolbarItemGroup(placement: .primaryAction) {
                 if scene != nil {
                     Button {
                         self.scene = nil
                     } label: {
-                        Label("Gallery", systemImage: "square.grid.2x2")
+                        Label("Browse Previews", systemImage: "square.grid.2x2")
                     }
                     .keyboardShortcut("g", modifiers: .command)
                     .accessibilityIdentifier("galleryButton")
@@ -68,6 +96,82 @@ struct WorkspaceView: View {
                 }
             }
         }
+    }
+
+
+    private var experimentLibrary: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            Text("Library").font(Design.title).accessibilityAddTraits(.isHeader)
+            TextField("Search experiments", text: $librarySearch)
+                .textFieldStyle(.roundedBorder)
+                .focused($librarySearchFocused)
+                .accessibilityLabel("Search experiments")
+                .accessibilityIdentifier("experimentSearch")
+            Picker("Category", selection: $libraryCategory) {
+                ForEach(LibraryCategory.allCases) { Text($0.rawValue).tag($0) }
+            }
+            .labelsHidden().accessibilityLabel("Experiment category")
+            .accessibilityIdentifier("experimentCategory")
+            ScrollView {
+                VStack(alignment: .leading, spacing: 4) {
+                    ForEach(LibraryCategory.allCases.filter { $0 != .all }) { category in
+                        let entries = LibraryExperiment.entries.filter {
+                            $0.category == category && (libraryCategory == .all || libraryCategory == category) && $0.matches(librarySearch)
+                        }
+                        if !entries.isEmpty {
+                            Text(category.rawValue.uppercased()).font(Design.metadata)
+                                .foregroundStyle(Design.secondary).padding(.top, 16).padding(.bottom, 4)
+                            ForEach(entries) { entry in
+                                Button {
+                                    if let preset = entry.surface, surface.preset != preset { surface.select(preset) }
+                                    open(entry.scene)
+                                } label: {
+                                    VStack(alignment: .leading, spacing: 4) {
+                                        Text(entry.title).font(Design.section)
+                                        Text(entry.detail).font(Design.metadata).foregroundStyle(Design.secondary)
+                                    }
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(8)
+                                    .background(isSelected(entry) ? Design.elevated : Color.clear)
+                                    .overlay(alignment: .leading) {
+                                        if isSelected(entry) { Rectangle().fill(Design.accent).frame(width: 2) }
+                                    }
+                                    .contentShape(Rectangle())
+                                }
+                                .buttonStyle(.plain)
+                                .accessibilityIdentifier("library."+entry.id)
+                                .accessibilityAddTraits(isSelected(entry) ? .isSelected : [])
+                            }
+                        }
+                    }
+                    if !LibraryExperiment.entries.contains(where: {
+                        (libraryCategory == .all || $0.category == libraryCategory) && $0.matches(librarySearch)
+                    }) {
+                        Text("No matching experiments").font(Design.section).padding(.top, 16)
+                        Text("Try another name, model or category.").font(Design.body).foregroundStyle(Design.secondary)
+                        Button("Clear filters") { librarySearch = ""; libraryCategory = .all }
+                            .padding(.top, 8).accessibilityIdentifier("clearLibraryFilters")
+                    }
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            Spacer(minLength: 0)
+            Rectangle().fill(Design.border).frame(height: 1)
+            Button("Blank Scene", systemImage: "plus") { open(.blank) }
+                .accessibilityIdentifier("library.blank")
+            Button("Browse live previews", systemImage: "square.grid.2x2") { scene = nil }
+                .accessibilityIdentifier("libraryPreviews")
+            Text("⌘L Search · ⇧⌘L Hide library").font(Design.metadata).foregroundStyle(Design.secondary)
+        }
+        .padding(16)
+        .frame(width: 216)
+        .frame(maxHeight: .infinity)
+        .background(Design.surface)
+        .accessibilityElement(children: .contain)
+    }
+
+    private func isSelected(_ entry: LibraryExperiment) -> Bool {
+        scene == entry.scene && (entry.surface == nil || surface.preset == entry.surface)
     }
 
     private var gallery: some View {
@@ -378,10 +482,38 @@ struct WorkspaceView: View {
     }
 
     private func open(_ scene: WorkspaceScene) {
+        librarySearchFocused = false
         renderFailure = nil
         self.scene = scene
         inspectorVisible = true
     }
 
     private func reportFailure(_ message: String) { renderFailure = message }
+}
+
+
+private enum LibraryCategory: String, CaseIterable, Identifiable {
+    case all = "All experiments", dynamics = "Dynamical systems", geometry = "Geometry"
+    var id: String { rawValue }
+}
+
+private struct LibraryExperiment: Identifiable {
+    let id: String
+    let title: String
+    let detail: String
+    let category: LibraryCategory
+    let scene: WorkspaceScene
+    var surface: SurfacePreset? = nil
+    func matches(_ query: String) -> Bool {
+        let text = title+" "+detail+" "+category.rawValue
+        return query.split(whereSeparator: { $0.isWhitespace }).allSatisfy { text.localizedStandardContains(String($0)) }
+    }
+    static let entries: [Self] = [
+        Self(id: "lorenz", title: "Lorenz Attractor", detail: "Chaos · Classic, Filament, Sculpture", category: .dynamics, scene: .lorenz),
+        Self(id: "torusGeodesics", title: "Torus Geodesics", detail: "Motion on a curved surface · RK4", category: .dynamics, scene: .torusGeodesics),
+        Self(id: "wormholeGeodesics", title: "Wormhole Geodesics", detail: "Parallel launches · rounded return", category: .dynamics, scene: .wormholeGeodesics),
+        Self(id: "wormhole", title: "Wormhole Surface", detail: "Funnel · wireframe and coordinates", category: .geometry, scene: .surface, surface: .wormhole),
+        Self(id: "torus", title: "Torus Surface", detail: "Parametric ring · coordinates", category: .geometry, scene: .surface, surface: .torus),
+        Self(id: "triangle", title: "Triangle Study", detail: "Three vertices · one surface", category: .geometry, scene: .triangle)
+    ]
 }

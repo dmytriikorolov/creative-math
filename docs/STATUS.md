@@ -4,6 +4,14 @@ Last updated: 2026-11-13. Read this first; then consult task-relevant source and
 evidence rather than rescanning the project. Required project/skill reads in AGENTS.md
 still apply. Update after meaningful work with changes, verification, issues and next step.
 
+## Autonomous roadmap — UX-01 branch
+
+Git initialized at approved main `961bf61`. PR 1 is [open, unmerged](https://github.com/dmytriikorolov/creative-math/pull/1); its verification does not establish M3.2 acceptance.
+
+Independent `feature/ux01-library-workspace` in `/private/tmp/creative-math-ux01` adds searchable categorized navigation beside the existing workspace. All existing sessions, previews and renderers retained. Tests: 97 reported, 89 passed/eight Metal skips; release/signature pass. Real search/empty/selection/collapse and Torus screenshots captured; final accessibility inheritance/focus fix rebuilt and inspected. Exact compact capture failed due to native-tool resize error; full Xcode/UI suite remains unavailable. [Evidence](evidence/ux01/README.md), [current progress](AUTONOMOUS_PROGRESS.md).
+
+Next slice M4.1 is authorized by the current roadmap request; stack explicitly on UX-01 if reusing its navigation. Do not merge either PR or treat it as approved.
+
 ## Audit and autonomous workflow — 2026-11-13
 
 - Added [confirmed project status](PROJECT_STATUS.md), [development workflow](DEVELOPMENT_WORKFLOW.md), concise repository-grounded AGENTS.md and `scripts/verify.sh` (`check`, `launch`, `xcode`). No application behavior changed.
