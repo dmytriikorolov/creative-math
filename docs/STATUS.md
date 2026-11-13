@@ -6,7 +6,7 @@ still apply. Update after meaningful work with changes, verification, issues and
 
 ## Current autonomous handoff — M3.3 draft
 
-All roadmap slices now have committed implementations/verification branches; none has been merged. PR 1 = M3.2 verification (not accepted), PR 2 = UX-01, draft PR 3 = M4.1 explicitly stacked on PR 2. Current `feature/m3-3-vector-fields` is explicitly stacked on draft PR 3 in `/private/tmp/creative-math-ux01`; publication follows verification.
+All roadmap slices now have committed implementations/verification branches; none has been merged. PR 1 = M3.2 verification (not accepted), PR 2 = UX-01, draft PR 3 = M4.1 explicitly stacked on PR 2. Current `feature/m3-3-vector-fields` is [draft PR 4](https://github.com/dmytriikorolov/creative-math/pull/4), explicitly stacked on draft PR 3 in `/private/tmp/creative-math-ux01`. All four PRs are open; none merged.
 
 M3.3 adds four parameterized 2D fields, Euler/RK4 trajectories, adjustable fixed Δt, bounded history, direction plot and diagnostics. Existing clock default preserved. 106 reported tests: 98 passed/eight Metal skips; release/signature pass. [Evidence and limitations](evidence/m3-3/README.md), [aggregate progress](AUTONOMOUS_PROGRESS.md).
 

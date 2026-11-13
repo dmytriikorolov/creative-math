@@ -31,7 +31,7 @@ Existing checks cover model equations/convergence/invariants, deterministic play
 
 ## Unmerged roadmap work
 
-UX-01 is PR 2; Optimization is draft PR 3 stacked on PR 2; Vector Fields is the next draft stacked on PR 3. These feature-branch implementations are not accepted/main functionality. Current native inspection returns `cgWindowNotFound`; both planar UIs remain visually unverified. See AUTONOMOUS_PROGRESS.md for the next safe action; historical recommendations below are retained for context.
+UX-01 is PR 2; Optimization is draft PR 3 stacked on PR 2; Vector Fields is draft PR 4 stacked on PR 3. These feature-branch implementations are not accepted/main functionality. Current native inspection returns `cgWindowNotFound`; both planar UIs remain visually unverified. See AUTONOMOUS_PROGRESS.md for the next safe action; historical recommendations below are retained for context.
 
 ## Technical debt and priorities
 
