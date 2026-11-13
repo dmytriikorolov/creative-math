@@ -17,7 +17,7 @@ Audit date: 2026-11-13. Source inspection and fresh execution take precedence ov
 |---|---|
 | M0–M2 | Historical user acceptance recorded 2026-11-02; preserved, not newly visually certified by this audit |
 | M3.1 / M3.2 | Implemented; desktop/GPU verification and actual animation review remain acceptance gates |
-| UX-01 Library / Workspace redesign | No dedicated implementation/spec found; current gallery is Studies. Historical proposal needs a bounded spec |
+| UX-01 Library / Workspace | Implemented on independent feature branch: search/categories/direct navigation; desktop smoke verified, compact/Xcode review pending |
 | M4.1 Optimization Foundations | Not implemented; broad M4 goals exist, no precise M4.1 acceptance spec found |
 | M3.3 Vector Fields | Not started; deferred |
 
@@ -25,7 +25,7 @@ Scene save/load, undo/redo, PNG/video export, expression AST/editor and timeline
 
 ## Verification and blockers
 
-Fresh SwiftPM run: 97 reported, 89 passed, eight Metal skips, zero failures. Release packaging and strict signature verification passed. Actual app launch and partial gallery/Torus/Wormhole screenshot review succeeded after retry; compact and full animation/accessibility review remain pending. Minor rounded-return grid kinks are recorded for targeted follow-up. See the audit evidence for commands/results. This directory is a source snapshot without `.git`; status, commits, remotes, feature branches and PR creation cannot be verified here. No Git configuration was changed and nothing was published. Full Xcode is absent from `/Applications` and the selected developer directory is Command Line Tools; Xcode build/UI tests are blocked. Visible desktop verification must be reported separately from SwiftPM compilation.
+Fresh SwiftPM run: 97 reported, 89 passed, eight Metal skips, zero failures. Release packaging and strict signature verification passed. Actual app launch and partial gallery/Torus/Wormhole screenshot review succeeded after retry; compact and full animation/accessibility review remain pending. Minor rounded-return grid kinks are recorded for targeted follow-up. See the audit evidence for commands/results. Git is now initialized with origin `dmytriikorolov/creative-math`. PR 1 is merged; UX-01 / PR 2 is being integrated with user approval. Draft PRs 3/4 remain unmerged pending actual UI verification. Historical audit limitations below do not establish readiness of those drafts. Full Xcode is absent from `/Applications` and the selected developer directory is Command Line Tools; Xcode build/UI tests are blocked. Visible desktop verification must be reported separately from SwiftPM compilation.
 
 Existing checks cover model equations/convergence/invariants, deterministic playback/relaunch, geometry, panel placement, GPU/reference/render behavior and XCTest interaction screenshots. SwiftPM runs core/Metal Swift Testing targets; UI tests require the Xcode scheme. GPU tests can skip when no device exists; skipped checks are outstanding coverage.
 

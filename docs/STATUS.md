@@ -4,11 +4,14 @@ Last updated: 2026-11-13. Read this first; then consult task-relevant source and
 evidence rather than rescanning the project. Required project/skill reads in AGENTS.md
 still apply. Update after meaningful work with changes, verification, issues and next step.
 
-## Autonomous roadmap — current
+## Integration — 2026-11-13
 
-Git is now initialized: main base `961bf61`, origin `dmytriikorolov/creative-math`. Session policy denies writing the primary checkout's `.git`; work proceeds in `/private/tmp/creative-math-autonomous` on `feature/m3-2-stabilization`, preserving identity/history. No main push/merge.
+User authorized merging ready work. PR 1 (M3.2 verification) merged to main at `252d3fb`; UX-01 / PR 2 now integrates that main without changing application source. Conflicts were limited to handoff and generated graph artifacts; handoff reconciled and graph regenerated. Fresh combined validation FAILED: 97 passed/one Metal rear-marker occlusion failure, no skips. Expanded permissions now run GPU tests formerly skipped. Build/signature stages were not run after the test failure. [Evidence](evidence/ready-pr-integration/README.md). PR 2 is held unmerged.
 
-M3.2 verification adds a 17-slot/three-seed open+rounded stress regression: 98 reported, 90 passed/eight Metal skipped. Actual 16× multi-ball/follow and surface/trajectory mode inspection recorded in [evidence](evidence/m3-2-stabilization/README.md). No model change or acceptance claim. Full Xcode, compact and continuous animation review remain pending. Track current branch/PR and next action in [autonomous progress](AUTONOMOUS_PROGRESS.md). Next product slice: UX-01 on an independent main-based feature branch.
+M3.2 remains subject to user animation acceptance. UX-01 retains earlier actual search/navigation screenshots and known compact/Xcode limitations. Draft PR 3 (Optimization) and draft PR 4 (Vector Fields) remain unmerged because their actual UI verification is blocked by `cgWindowNotFound`. Do not treat their tested numeric code as accepted UI.
+
+Current working checkout is the original repository; filesystem/Git/network access now works. Next safe action: inspect the GPU rear-marker occlusion failure before merging PR 2; sync local main to merged PR 1 only. See [progress](AUTONOMOUS_PROGRESS.md).
+
 
 ## Audit and autonomous workflow — 2026-11-13
 
