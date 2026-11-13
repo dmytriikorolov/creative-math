@@ -2,12 +2,15 @@
 
 Updated 2026-11-13.
 
-- Current milestone: PR 1 — M3.2 verification/stabilization; not accepted.
-- Branch: `feature/m3-2-stabilization` in `/private/tmp/creative-math-autonomous`; base `961bf61` (`main`). Main checkout `.git` writes are denied by the session filesystem policy; isolated clone preserves history/author identity. No main changes.
-- Plan: inspect existing solvers/camera/rendering; stress all 17 launch slots over repeated recycling/seeds; inspect actual modes/follow over time; fix only reproduced defects; build/test, retain evidence and publish PR.
-- Completed: source and graph relationship review; new deterministic full-pool stress regression. Existing math/rendering architecture retained.
-- Build/tests: 98 reported, 90 passed, eight Metal skipped, zero failures. Release/signature results in the evidence directory. Full Xcode unavailable; GPU tests may skip in shell context.
-- UI: baseline app launched; follow enabled at 16× and multiple paths observed. Later approaching state with follow retained; Surface/Trajectories modes inspected and captured. No crash/render banner observed.
-- Screenshots: `docs/evidence/m3-2-stabilization/screenshots/`.
-- Remaining: PR publication, full Xcode/device and continuous animation review; user animation acceptance remains required.
-- Next safe action: finish PR 1 verification before UX-01. Later milestones must use independent main-based branches or explicitly stacked PRs.
+| Scope | PR / branch | State |
+|---|---|---|
+| M3.2 verification | [#1](https://github.com/dmytriikorolov/creative-math/pull/1), `feature/m3-2-stabilization` | Merged to main with user authorization; mathematical stress regression and desktop screenshots retained; animation acceptance outstanding |
+| UX-01 | [#2](https://github.com/dmytriikorolov/creative-math/pull/2), `feature/ux01-library-workspace` | Draft, held unmerged: combined test run has a rear-marker Metal occlusion failure; prior search/navigation review retained |
+| Optimization | [Draft #3](https://github.com/dmytriikorolov/creative-math/pull/3), `feature/m4-1-optimization` | Remains unmerged, actual UI verification blocked |
+| Vector Fields | [Draft #4](https://github.com/dmytriikorolov/creative-math/pull/4), `feature/m3-3-vector-fields` | Remains unmerged, stacked on #3, actual UI verification blocked |
+
+Integration scope: reconcile handoff and regenerate Graphify; no application source changes. Fresh integration check FAILED (97 passed/one Metal failure, no skips); build/signature stages NOT RUN after test failure. Evidence: [evidence](evidence/ready-pr-integration/README.md). Historical screenshots: [M3.2](evidence/m3-2-stabilization/README.md), [UX-01](https://github.com/dmytriikorolov/creative-math/blob/feature/ux01-library-workspace/docs/evidence/ux01/README.md).
+
+Git and network access now work in the original checkout. No history rewrite, identity change or direct main push. Next safe action: investigate WormholeRenderingTests.swift:49 before merging PR 2; sync local main only to merged work. Resolve native `cgWindowNotFound` before reviewing/promoting draft #3/#4. Full Xcode/device assertions and exact compact review remain outstanding. No background execution.
+
+This readiness report contains documentation/evidence only; UX-01 application source is not included in main.
