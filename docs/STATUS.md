@@ -4,6 +4,14 @@ Last updated: 2026-11-13. Read this first; then consult task-relevant source and
 evidence rather than rescanning the project. Required project/skill reads in AGENTS.md
 still apply. Update after meaningful work with changes, verification, issues and next step.
 
+## Current autonomous slice — M4.1 draft
+
+PR 1 (M3.2) and PR 2 (UX-01) are open/unmerged. M4.1 is explicitly stacked on PR 2 in `feature/m4-1-optimization`, checkout `/private/tmp/creative-math-ux01`.
+
+Implemented objective/gradient/Hessian API, five objective families, safeguarded GD/momentum/Newton, bounded traces, sampled level sets and interactive optimization workspace. [Evidence/model/limitations](evidence/m4-1/README.md). Final 102-test run: 94 passed/eight Metal skips; release/signature pass. First build invalidated by concurrent edits, final frozen-source build passed.
+
+**M4.1 visual QA blocked:** native tools return `cgWindowNotFound` even after reopen; no screenshot or acceptance claim. Open command exit 0 is insufficient. No matching crash report found. Keep the PR draft until visible UI/layout and functional review succeeds. Next safe work: M3.3 concrete numeric fields/integrators on an explicitly labelled stack; do not merge or treat earlier PRs as approved.
+
 ## Autonomous roadmap — UX-01 branch
 
 Git initialized at approved main `961bf61`. PR 1 is [open, unmerged](https://github.com/dmytriikorolov/creative-math/pull/1); its verification does not establish M3.2 acceptance.
