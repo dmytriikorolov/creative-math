@@ -4,13 +4,14 @@ Last updated: 2026-11-13. Read this first; then consult task-relevant source and
 evidence rather than rescanning the project. Required project/skill reads in AGENTS.md
 still apply. Update after meaningful work with changes, verification, issues and next step.
 
-## Autonomous roadmap — UX-01 branch
+## Integration — 2026-11-13
 
-Git initialized at approved main `961bf61`. PR 1 is [open, unmerged](https://github.com/dmytriikorolov/creative-math/pull/1); its verification does not establish M3.2 acceptance.
+User authorized merging ready work. PR 1 (M3.2 verification) merged to main at `252d3fb`; UX-01 / PR 2 now integrates that main without changing application source. Conflicts were limited to handoff and generated graph artifacts; handoff reconciled and graph regenerated. Fresh combined validation FAILED: 97 passed/one Metal rear-marker occlusion failure, no skips. Expanded permissions now run GPU tests formerly skipped. Build/signature stages were not run after the test failure. [Evidence](evidence/ready-pr-integration/README.md). PR 2 is held unmerged.
 
-Independent `feature/ux01-library-workspace` in `/private/tmp/creative-math-ux01` adds searchable categorized navigation beside the existing workspace. All existing sessions, previews and renderers retained. Tests: 97 reported, 89 passed/eight Metal skips; release/signature pass. Real search/empty/selection/collapse and Torus screenshots captured; final accessibility inheritance/focus fix rebuilt and inspected. Exact compact capture failed due to native-tool resize error; full Xcode/UI suite remains unavailable. [Evidence](evidence/ux01/README.md), [current progress](AUTONOMOUS_PROGRESS.md).
+M3.2 remains subject to user animation acceptance. UX-01 retains earlier actual search/navigation screenshots and known compact/Xcode limitations. Draft PR 3 (Optimization) and draft PR 4 (Vector Fields) remain unmerged because their actual UI verification is blocked by `cgWindowNotFound`. Do not treat their tested numeric code as accepted UI.
 
-Next slice M4.1 is authorized by the current roadmap request; stack explicitly on UX-01 if reusing its navigation. Do not merge either PR or treat it as approved.
+Current working checkout is the original repository; filesystem/Git/network access now works. Next safe action: inspect the GPU rear-marker occlusion failure before merging PR 2; sync local main to merged PR 1 only. See [progress](AUTONOMOUS_PROGRESS.md).
+
 
 ## Audit and autonomous workflow — 2026-11-13
 

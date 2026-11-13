@@ -430,3 +430,38 @@ import Testing
     tracking.reset(camera: &camera,preset: OrbitCamera())
     #expect(!tracking.isFollowing && camera == OrbitCamera())
 }
+
+// Long-running pool regression: compare independent runs over repeated recycling,
+// with every supported slot occupied, and retain a survivor in the same pool.
+@Test func fullContinuousPoolRepeatsAcrossSeedsShapesAndRestarts() throws {
+    for rounded in [false,true] {
+        for seed: UInt64 in [0,42,999999] {
+            var beam = WormholeBeam()
+            beam.geometry.funnel?.roundedReturnEdge = rounded
+            try beam.arrange(count: 17,startX: -24,center: 0,width: 20)
+            beam.heading = .pi // outward: all slots must retire and relaunch
+            var settings = WormholeLaunchSettings()
+            settings.continuous = true; settings.seed = seed; settings.variation = 1
+            if rounded {
+                var a = try RoundedWormholeComparison(beam: beam,trailLength: 256,launches: settings)
+                var b = a
+                for _ in 0..<360 {
+                    try a.advance(elapsed: 1.0/60,paused: false,rate: 16)
+                    try b.advance(elapsed: 1.0/60,paused: false,rate: 16)
+                }
+                #expect(a.stream.generations.allSatisfy { $0 >= 2 })
+                #expect(a.tracks.map { $0.solver.position } == b.tracks.map { $0.solver.position })
+                #expect(a.tracks.allSatisfy { $0.trail.count <= 256 && abs($0.solver.energyDrift) < 1e-5 })
+            } else {
+                var a = try WormholeComparison(beam: beam,trailLength: 256,launches: settings)
+                for _ in 0..<360 { try a.advance(elapsed: 1.0/60,paused: false,rate: 16) }
+                let states = a.tracks.map { $0.solver.state }, generations = a.stream.generations
+                #expect(generations.allSatisfy { $0 >= 2 })
+                try a.restart(paused: true)
+                for _ in 0..<360 { try a.advance(elapsed: 1.0/60,paused: false,rate: 16) }
+                #expect(a.tracks.map { $0.solver.state } == states && a.stream.generations == generations)
+                #expect(a.tracks.allSatisfy { $0.trail.count <= 256 && abs($0.solver.energyDrift) < 1e-7 })
+            }
+        }
+    }
+}
