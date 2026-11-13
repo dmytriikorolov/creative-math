@@ -4,6 +4,12 @@ Last updated: 2026-11-13. Read this first; then consult task-relevant source and
 evidence rather than rescanning the project. Required project/skill reads in AGENTS.md
 still apply. Update after meaningful work with changes, verification, issues and next step.
 
+## Autonomous roadmap — current
+
+Git is now initialized: main base `961bf61`, origin `dmytriikorolov/creative-math`. Session policy denies writing the primary checkout's `.git`; work proceeds in `/private/tmp/creative-math-autonomous` on `feature/m3-2-stabilization`, preserving identity/history. No main push/merge.
+
+M3.2 verification adds a 17-slot/three-seed open+rounded stress regression: 98 reported, 90 passed/eight Metal skipped. Actual 16× multi-ball/follow and surface/trajectory mode inspection recorded in [evidence](evidence/m3-2-stabilization/README.md). No model change or acceptance claim. Full Xcode, compact and continuous animation review remain pending. Track current branch/PR and next action in [autonomous progress](AUTONOMOUS_PROGRESS.md). Next product slice: UX-01 on an independent main-based feature branch.
+
 ## Audit and autonomous workflow — 2026-11-13
 
 - Added [confirmed project status](PROJECT_STATUS.md), [development workflow](DEVELOPMENT_WORKFLOW.md), concise repository-grounded AGENTS.md and `scripts/verify.sh` (`check`, `launch`, `xcode`). No application behavior changed.
