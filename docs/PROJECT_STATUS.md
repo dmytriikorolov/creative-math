@@ -18,7 +18,7 @@ Audit date: 2026-11-13. Source inspection and fresh execution take precedence ov
 | M0–M2 | Historical user acceptance recorded 2026-11-02; preserved, not newly visually certified by this audit |
 | M3.1 / M3.2 | Implemented; desktop/GPU verification and actual animation review remain acceptance gates |
 | UX-01 Library / Workspace | Implemented on independent feature branch: search/categories/direct navigation; desktop smoke verified, compact/Xcode review pending |
-| M4.1 Optimization Foundations | Not implemented; broad M4 goals exist, no precise M4.1 acceptance spec found |
+| M4.1 Optimization Foundations | Implemented on explicit UX-01 stack; numerical/build checks passed, draft pending actual UI verification |
 | M3.3 Vector Fields | Not started; deferred |
 
 Scene save/load, undo/redo, PNG/video export, expression AST/editor and timeline remain deferred. Do not interpret architectural proposals as delivered functionality.

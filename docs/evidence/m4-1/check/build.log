@@ -1,0 +1,15 @@
+warning: /Users/dima/Library/org.swift.swiftpm/configuration is not accessible or not writable, disabling user-level cache features.
+warning: /Users/dima/Library/org.swift.swiftpm/security is not accessible or not writable, disabling user-level cache features.
+[0/1] Planning build
+Building for production...
+[0/7] Write sources
+[2/7] Write swift-version--1AB21518FC5DEDBE.txt
+[4/8] Compiling WorkspaceCore CameraProjection.swift
+[5/10] Compiling LorenzMetal LorenzGPU.swift
+[6/11] Compiling SurfaceMetal GeodesicTrails.swift
+[7/12] Compiling LorenzValidation main.swift
+[7/12] Write Objects.LinkFileList
+[8/12] Linking LorenzValidation
+[10/12] Compiling CreativeMath CreativeMathApp.swift
+error: input file '/private/tmp/creative-math-ux01/Sources/CreativeMath/CreativeMathApp.swift' was modified during the build
+error: input file '/private/tmp/creative-math-ux01/Sources/CreativeMath/CreativeMathApp.swift' was modified during the build

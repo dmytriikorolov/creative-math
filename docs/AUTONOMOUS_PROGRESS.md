@@ -2,11 +2,13 @@
 
 Updated 2026-11-13.
 
-- PR 1: [M3.2 verification](https://github.com/dmytriikorolov/creative-math/pull/1), open/unmerged; 98 reported, 90 passed/eight Metal skips; actual mode/motion screenshots. M3.2 not accepted.
-- Current milestone: UX-01. Branch `feature/ux01-library-workspace`, independent approved main base `961bf61`, checkout `/private/tmp/creative-math-ux01` (primary `.git` writes restricted).
-- Completed: searchable/categorized Library, direct study navigation, selected state, empty recovery, keyboard search/toggle and preserved sessions; all existing live previews/experiments retained.
-- Build/tests: 97 reported, 89 passed/eight Metal skips; release/signature pass; final UI fix rebuilt; UI test source parsed. Full Xcode suite unavailable.
-- UI: real app search, empty recovery, Torus motion/static navigation and sidebar collapse inspected. Final accessibility IDs verified after fixing inherited container ID. [Evidence/screenshots](evidence/ux01/README.md).
-- Remaining: PR publication; exact compact/VoiceOver review. Coordinate resize fails in Computer Use (`noWindowsAvailable`), recovery by bundle ID works.
-- Next safe action: commit/open UX-01 PR; M4.1 may stack explicitly on this navigation branch. No merge/main push authorized.
-- Publication: shell SSH DNS is unreliable; authenticated GitHub connector works. Account name/email match Git identity. PR 1 remote commit `8a416e4` has the exact local tested tree `c0c31f5d`; no history rewrite.
+| Milestone | Branch / PR | Current evidence |
+|---|---|---|
+| M3.2 verification | `feature/m3-2-stabilization` / [PR 1](https://github.com/dmytriikorolov/creative-math/pull/1), open | 98 reported, 90 passed/eight Metal skips; actual modes/motion screenshots; not accepted |
+| UX-01 | `feature/ux01-library-workspace` / [PR 2](https://github.com/dmytriikorolov/creative-math/pull/2), open | 97 reported, 89 passed/eight Metal skips; release/signature and actual search/navigation review |
+| M4.1 | `feature/m4-1-optimization`, explicitly stacked on PR 2 | Core objectives/solvers/level sets, interactive plot/inspector implemented; initial 102-test run passed with eight Metal skips; final build/signature passed; VISUAL QA NOT RUN (`cgWindowNotFound`), draft required |
+| M3.3 | Not started | After M4.1 |
+
+Current checkout: `/private/tmp/creative-math-ux01` (primary `.git` writes restricted). PR 1 uses `/private/tmp/creative-math-autonomous`. Original main is unchanged. Connector publication is used after shell SSH/DNS failure, with matching Git author account and exact tree verification; local/remote commit timestamps/SHAs differ.
+
+Next safe action: publish M4.1 draft and continue safe M3.3 numeric work on an explicit stack. Remaining shared limitations: full Xcode/UI execution and Metal assertions unavailable in shell; exact compact sizing fails via native coordinate resize. No merge or acceptance is implied.
