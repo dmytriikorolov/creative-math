@@ -2,6 +2,10 @@
 
 Audit date: 2026-11-13. Source inspection and fresh execution take precedence over historical plans. Detailed results: [audit evidence](evidence/audit-2026-11-13/README.md).
 
+## Current merge readiness — 2026-11-13
+
+PR 1 merged with user approval. Draft PR 2 remains unmerged after a fresh integration check exposed a rear-marker Metal occlusion assertion failure (97 passed, one failed, no skips). Previous device checks had been skipped. Draft PRs 3/4 remain unmerged and visually unverified. [Failure evidence](evidence/ready-pr-integration/README.md). Main contains neither UX-01 nor the two new planar experiments; no full application acceptance is claimed. Git/network access now work in this checkout; older no-Git statements below are historical.
+
 ## Confirmed implementation
 
 - Swift 6 / macOS 14+ native application; SwiftUI shell, AppKit/MTKView bridge, Metal drawing/compute. SwiftPM and a shared Xcode scheme; no external package dependencies.
