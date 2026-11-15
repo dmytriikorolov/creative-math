@@ -1,10 +1,10 @@
-# Graph Report - creative-math  (2026-11-13)
+# Graph Report - creative-math-pr-finish  (2026-11-15)
 
 ## Corpus Check
-- 54 files · ~68,336 words
+- 54 files · ~68,730 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 90 file(s) not represented in the graph (top: .log 85, (none) 1, .icns 1)
-- WARNING: 90 of 206 files seen (44%) have no supported extractor and are missing from this graph entirely. It may look complete while representing only part of the codebase.
+- Unclassified: 93 file(s) not represented in the graph (top: .log 88, (none) 1, .icns 1)
+- WARNING: 93 of 212 files seen (44%) have no supported extractor and are missing from this graph entirely. It may look complete while representing only part of the codebase.
 
 ## Summary
 - 968 nodes · 2342 edges · 60 communities (38 shown, 22 thin omitted)
@@ -12,7 +12,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `cde564a2`
+- Built from commit: `ce8c156f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -25,7 +25,7 @@
 - SurfaceMotionSession
 - EllisWormhole
 - WormholeBeam
-- TorusMetric
+- Testing
 - FixedStepClock
 - SurfaceSession
 - TrailFade
@@ -51,12 +51,12 @@
 - WorkspaceView
 - CreativeMathApp.swift
 - WorkspaceCore
-- WorkspaceCore
+- TrajectorySnapshot
 - LorenzPreset
 - Foundation
 - GeodesicAppearance
 - CameraAction
-- LocalizedError
+- .gallery
 - verify.sh
 - GeodesicAppearance
 - TrajectorySnapshot
@@ -77,16 +77,16 @@
 10. `WormholeComparison` - 30 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `restoredFunnelMatchesAcceptedSurfaceAndItsInducedMetric()` --calls--> `WormholeBeam`  [INFERRED]
-  Tests/WorkspaceCoreTests/WormholeComparisonTests.swift → Sources/WorkspaceCore/WormholeComparison.swift
-- `parallelStartsHaveSameHeadingAndUnitSurfaceSpeed()` --references--> `WormholeConfiguration`  [INFERRED]
-  Tests/WorkspaceCoreTests/WormholeComparisonTests.swift → Sources/WorkspaceCore/EllisWormhole.swift
-- `changingOneStartingPointChangesTheOutcomeWithoutChangingHeading()` --calls--> `WormholeSolver`  [INFERRED]
-  Tests/WorkspaceCoreTests/WormholeComparisonTests.swift → Sources/WorkspaceCore/EllisWormhole.swift
-- `fasterWormholePlaybackKeepsFixedStepsAndCatchUpBound()` --calls--> `WormholeSolver`  [INFERRED]
-  Tests/WorkspaceCoreTests/WormholeComparisonTests.swift → Sources/WorkspaceCore/EllisWormhole.swift
-- `roundedMeshWeldsOneEdgeAndKeepsFiniteSurfaceSamples()` --calls--> `WormholeConfiguration`  [INFERRED]
-  Tests/WorkspaceCoreTests/WormholeComparisonTests.swift → Sources/WorkspaceCore/EllisWormhole.swift
+- `ellisRendererModesReuseGeometryAndDrawActualTrajectories()` --calls--> `GeodesicTrails`  [INFERRED]
+  Tests/LorenzMetalTests/WormholeRenderingTests.swift → Sources/SurfaceMetal/GeodesicTrails.swift
+- `ellisRendererModesReuseGeometryAndDrawActualTrajectories()` --calls--> `SurfaceRenderer`  [INFERRED]
+  Tests/LorenzMetalTests/WormholeRenderingTests.swift → Sources/SurfaceMetal/SurfaceRenderer.swift
+- `ellisRendererModesReuseGeometryAndDrawActualTrajectories()` --calls--> `CoordinateGrid`  [INFERRED]
+  Tests/LorenzMetalTests/WormholeRenderingTests.swift → Sources/WorkspaceCore/ParametricSurface.swift
+- `ellisRendererModesReuseGeometryAndDrawActualTrajectories()` --calls--> `GeodesicAppearance`  [INFERRED]
+  Tests/LorenzMetalTests/WormholeRenderingTests.swift → Sources/WorkspaceCore/TorusGeodesic.swift
+- `ellisRendererModesReuseGeometryAndDrawActualTrajectories()` --calls--> `WormholeBeam`  [INFERRED]
+  Tests/LorenzMetalTests/WormholeRenderingTests.swift → Sources/WorkspaceCore/WormholeComparison.swift
 
 ## Import Cycles
 - None detected.
@@ -117,7 +117,7 @@ Nodes (28): EllisWormhole, .axialScale, .camera, .isValid, LegacyFunnelProfile, 
 Cohesion: 0.06
 Nodes (49): .renderBatch, .renderedTrail, .selectedHasDisappeared, .selectedIsVisible, .selectedOutcome, .selectedPosition, .summary, WormholeError (+41 more)
 
-### Community 8 - "TorusMetric"
+### Community 8 - "Testing"
 Cohesion: 0.24
 Nodes (6): .initialState, .position, .relativeSpeedDrift, TorusMetric, .isValid, torusMetricAndAccelerationMatchGeometry()
 
@@ -209,7 +209,7 @@ Nodes (5): CoordinateGrid, .isValid, .spacing, surfaceRendererDrawsBothPresetsAn
 Cohesion: 0.22
 Nodes (8): WormholeLaunch, crossing, deflection, .id, .impactRatio, nearCritical, .summary, .title
 
-### Community 37 - "WorkspaceCore"
+### Community 37 - "TrajectorySnapshot"
 Cohesion: 0.17
 Nodes (9): AppKit, Foundation, LorenzMetal, Metal, Observation, simd, SurfaceMetal, Testing (+1 more)
 
@@ -229,7 +229,7 @@ Nodes (5): SurfaceError, .errorDescription, invalidParameters, metalUnavailable,
 Cohesion: 0.50
 Nodes (4): CameraAction, orbit, pan, zoom
 
-### Community 49 - "LocalizedError"
+### Community 49 - ".gallery"
 Cohesion: 0.13
 Nodes (13): ValidationError, .errorDescription, gpuFailure, referenceMismatch, LorenzError, .errorDescription, invalidConfiguration, metalUnavailable (+5 more)
 
@@ -253,7 +253,7 @@ Nodes (3): ParticleCameraTracking, followCameraRespectsPausedStepRestartAndInval
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `WormholeSession` connect `WormholeSession` to `.encode`, `WorkspaceView`, `SurfaceMotionSession`, `WorkspaceCore`, `WormholeBeam`, `EllisWormhole`, `SurfaceSession`, `TrailFade`, `GeodesicPlayback`, `GeodesicAppearance`?**
+- **Why does `WormholeSession` connect `WormholeSession` to `.encode`, `WorkspaceView`, `SurfaceMotionSession`, `TrajectorySnapshot`, `WormholeBeam`, `EllisWormhole`, `SurfaceSession`, `TrailFade`, `GeodesicPlayback`, `GeodesicAppearance`?**
   _High betweenness centrality (0.108) - this node is a cross-community bridge._
 - **Are the 7 inferred relationships involving `WormholeSession` (e.g. with `WorkspaceView` and `.body`) actually correct?**
   _`WormholeSession` has 7 INFERRED edges - model-reasoned connections that need verification._

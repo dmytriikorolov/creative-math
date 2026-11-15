@@ -1,3 +1,11 @@
+# PR validation — 2026-11-15
+
+Working in isolated clone `/private/tmp/creative-math-pr-finish`; original main preserved. PR #2 integrated current main. Reproduced prior Metal failure with device access: 97 passed, one failed, zero skips. Corrected the test camera: elevated view can see the far throat through the opening; level camera checks both visible near marker and fully occluded far marker. No renderer changes. Fresh Library check: all 98 tests passed, zero skips; release build and strict signature passed. Evidence: `docs/evidence/pr-finish-library/`.
+
+Optimization and Vector Fields remain pending integration and fresh checks. Desktop tool recovered and returned actual Optimization screenshot, but this was a pre-existing running build, not identified with the checked source. Baseline/compact/focus/invalid-state review and full Xcode UI tests remain outstanding (full Xcode absent). No animation acceptance or performance claim. No PR merged.
+
+---
+
 # Project handoff
 
 Last updated: 2026-11-13. Read this first; then consult task-relevant source and linked
