@@ -25,14 +25,14 @@ private struct SurfaceSessionKey: FocusedValueKey {
     typealias Value = SurfaceSession
 }
 
-private struct OptimizationSessionKey: FocusedValueKey { typealias Value = OptimizationSession }
+private struct PlanarSessionKey: FocusedValueKey { typealias Value = any PlanarTransportSession }
 
 private struct GeodesicSessionKey: FocusedValueKey { typealias Value = any SurfaceMotionSession }
 
 extension FocusedValues {
-    var optimizationSession: OptimizationSession? {
-        get { self[OptimizationSessionKey.self] }
-        set { self[OptimizationSessionKey.self] = newValue }
+    var planarSession: (any PlanarTransportSession)? {
+        get { self[PlanarSessionKey.self] }
+        set { self[PlanarSessionKey.self] = newValue }
     }
     var geodesicSession: (any SurfaceMotionSession)? {
         get { self[GeodesicSessionKey.self] }
@@ -52,21 +52,21 @@ struct LorenzCommands: Commands {
     @FocusedValue(\.lorenzSession) private var session
     @FocusedValue(\.surfaceSession) private var surface
     @FocusedValue(\.geodesicSession) private var geodesic
-    @FocusedValue(\.optimizationSession) private var optimization
+    @FocusedValue(\.planarSession) private var planar
     var body: some Commands {
         CommandMenu("Simulation") {
-            Button(optimization.map { $0.isRunning ? "Pause" : "Run" } ?? ((geodesic?.isPaused ?? session?.isPaused) == true ? "Resume" : "Pause")) {
-                if let optimization { optimization.isRunning.toggle() }
+            Button(planar.map { $0.isRunning ? "Pause" : "Run" } ?? ((geodesic?.isPaused ?? session?.isPaused) == true ? "Resume" : "Pause")) {
+                if let planar { planar.isRunning.toggle() }
                 else if let geodesic { geodesic.isPaused.toggle() } else { session?.isPaused.toggle() }
             }
                 .keyboardShortcut(.space, modifiers: [])
-                .disabled(optimization.map { $0.run?.canStep != true } ?? (geodesic?.canAdvance == false || (session == nil && geodesic == nil) || session?.failure != nil || geodesic?.surface.failure != nil))
-            Button("Step") { if let optimization { optimization.step() } else if let geodesic { geodesic.step() } else { session?.step() } }
+                .disabled(planar.map { !$0.canStep } ?? (geodesic?.canAdvance == false || (session == nil && geodesic == nil) || session?.failure != nil || geodesic?.surface.failure != nil))
+            Button("Step") { if let planar { planar.step() } else if let geodesic { geodesic.step() } else { session?.step() } }
                 .keyboardShortcut("]", modifiers: .command)
-                .disabled(optimization.map { $0.isRunning || $0.run?.canStep != true } ?? (geodesic?.canAdvance == false || (geodesic?.isPaused ?? session?.isPaused) != true || session?.failure != nil || geodesic?.surface.failure != nil))
-            Button(geodesic == nil ? "Reset Simulation" : "Restart Simulation") { if let optimization { optimization.restart() } else if let geodesic { geodesic.restart() } else { session?.reset() } }
+                .disabled(planar.map { $0.isRunning || !$0.canStep } ?? (geodesic?.canAdvance == false || (geodesic?.isPaused ?? session?.isPaused) != true || session?.failure != nil || geodesic?.surface.failure != nil))
+            Button(geodesic == nil ? "Reset Simulation" : "Restart Simulation") { if let planar { planar.restart() } else if let geodesic { geodesic.restart() } else { session?.reset() } }
                 .keyboardShortcut("r", modifiers: .command)
-                .disabled(optimization == nil && geodesic == nil && (session == nil || session?.failure != nil))
+                .disabled(planar == nil && geodesic == nil && (session == nil || session?.failure != nil))
         }
         CommandMenu("Camera") {
             Button("Reset Camera") {

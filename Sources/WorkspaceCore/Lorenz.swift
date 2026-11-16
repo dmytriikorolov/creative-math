@@ -94,9 +94,10 @@ public struct FixedStepClock: Sendable {
     public private(set) var steps: UInt64 = 0
     public init() {}
     public mutating func reset() { self = Self() }
-    public mutating func consume(elapsed: Double, speed: Double = 1, paused: Bool = false, maximumSpeed: Double = 4) -> Int {
+    public mutating func consume(elapsed: Double, speed: Double = 1, paused: Bool = false, maximumSpeed: Double = 4, timestep: Double = Self.timestep) -> Int {
         guard !paused, elapsed.isFinite, elapsed >= 0, speed.isFinite, maximumSpeed.isFinite, (4...16).contains(maximumSpeed), (0.125...maximumSpeed).contains(speed) else { return 0 }
-        let dt = Self.timestep
+        guard timestep.isFinite, (1e-6...0.1).contains(timestep) else { return 0 }
+        let dt = timestep
         let added = min(elapsed, 0.25) * speed
         discardedTime += max(0, elapsed - 0.25) * speed
         remainder += added

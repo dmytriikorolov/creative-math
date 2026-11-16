@@ -23,7 +23,7 @@ PR 1 merged with user approval. Draft PR 2 remains unmerged after a fresh integr
 | M3.1 / M3.2 | Implemented; desktop/GPU verification and actual animation review remain acceptance gates |
 | UX-01 Library / Workspace | Implemented on independent feature branch: search/categories/direct navigation; desktop smoke verified, compact/Xcode review pending |
 | M4.1 Optimization Foundations | Implemented on explicit UX-01 stack; numerical/build checks passed, draft pending actual UI verification |
-| M3.3 Vector Fields | Not started; deferred |
+| M3.3 Vector Fields | Implemented on explicit M4.1 stack; 106-test/build pass with eight Metal skips; draft pending actual UI |
 
 Scene save/load, undo/redo, PNG/video export, expression AST/editor and timeline remain deferred. Do not interpret architectural proposals as delivered functionality.
 
@@ -32,6 +32,10 @@ Scene save/load, undo/redo, PNG/video export, expression AST/editor and timeline
 Fresh SwiftPM run: 97 reported, 89 passed, eight Metal skips, zero failures. Release packaging and strict signature verification passed. Actual app launch and partial gallery/Torus/Wormhole screenshot review succeeded after retry; compact and full animation/accessibility review remain pending. Minor rounded-return grid kinks are recorded for targeted follow-up. See the audit evidence for commands/results. Git is now initialized with origin `dmytriikorolov/creative-math`. PR 1 is merged; UX-01 / PR 2 is being integrated with user approval. Draft PRs 3/4 remain unmerged pending actual UI verification. Historical audit limitations below do not establish readiness of those drafts. Full Xcode is absent from `/Applications` and the selected developer directory is Command Line Tools; Xcode build/UI tests are blocked. Visible desktop verification must be reported separately from SwiftPM compilation.
 
 Existing checks cover model equations/convergence/invariants, deterministic playback/relaunch, geometry, panel placement, GPU/reference/render behavior and XCTest interaction screenshots. SwiftPM runs core/Metal Swift Testing targets; UI tests require the Xcode scheme. GPU tests can skip when no device exists; skipped checks are outstanding coverage.
+
+## Unmerged roadmap work
+
+UX-01 is PR 2; Optimization is draft PR 3 stacked on PR 2; Vector Fields is draft PR 4 stacked on PR 3. These feature-branch implementations are not accepted/main functionality. Current native inspection returns `cgWindowNotFound`; both planar UIs remain visually unverified. See AUTONOMOUS_PROGRESS.md for the next safe action; historical recommendations below are retained for context.
 
 ## Technical debt and priorities
 
