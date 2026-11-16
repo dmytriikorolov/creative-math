@@ -1,3 +1,11 @@
+# PR validation — 2026-11-15
+
+Working in isolated clone `/private/tmp/creative-math-pr-finish`; original main preserved. PR #2 integrated current main. Reproduced prior Metal failure with device access: 97 passed, one failed, zero skips. Corrected the test camera: elevated view can see the far throat through the opening; level camera checks both visible near marker and fully occluded far marker. No renderer changes. Fresh Library check: all 98 tests passed, zero skips; release build and strict signature passed. Evidence: `docs/evidence/pr-finish-library/`.
+
+Optimization and Vector Fields remain pending integration and fresh checks. Desktop tool recovered and returned actual Optimization screenshot, but this was a pre-existing running build, not identified with the checked source. Baseline/compact/focus/invalid-state review and full Xcode UI tests remain outstanding (full Xcode absent). No animation acceptance or performance claim. No PR merged.
+
+---
+
 # Project handoff
 
 Last updated: 2026-11-13. Read this first; then consult task-relevant source and linked
@@ -6,7 +14,7 @@ still apply. Update after meaningful work with changes, verification, issues and
 
 ## Integration — 2026-11-13
 
-User authorized merging ready work. PR 1 (M3.2 verification) merged to main at `252d3fb`; UX-01 / PR 2 now integrates that main without changing application source. Conflicts were limited to handoff and generated graph artifacts; handoff reconciled and graph regenerated. Fresh combined validation FAILED: 97 passed/one Metal rear-marker occlusion failure, no skips. Expanded permissions now run GPU tests formerly skipped. Build/signature stages were not run after the test failure. [Evidence](evidence/ready-pr-integration/README.md). PR 2 is now draft and held unmerged.
+User authorized merging ready work. PR 1 (M3.2 verification) merged to main at `252d3fb`; UX-01 / PR 2 now integrates that main without changing application source. Conflicts were limited to handoff and generated graph artifacts; handoff reconciled and graph regenerated. Fresh combined validation FAILED: 97 passed/one Metal rear-marker occlusion failure, no skips. Expanded permissions now run GPU tests formerly skipped. Build/signature stages were not run after the test failure. [Evidence](evidence/ready-pr-integration/README.md). PR 2 is held unmerged.
 
 M3.2 remains subject to user animation acceptance. UX-01 retains earlier actual search/navigation screenshots and known compact/Xcode limitations. Draft PR 3 (Optimization) and draft PR 4 (Vector Fields) remain unmerged because their actual UI verification is blocked by `cgWindowNotFound`. Do not treat their tested numeric code as accepted UI.
 

@@ -2,6 +2,31 @@ import XCTest
 
 @MainActor
 final class WorkspaceUITests: XCTestCase {
+    func testLibrarySearchRecoveryAndWorkspaceNavigation() {
+        let app = XCUIApplication(); app.launch()
+        let search = app.textFields["experimentSearch"]
+        XCTAssertTrue(search.waitForExistence(timeout: 5))
+        search.click(); search.typeText("torus")
+        XCTAssertTrue(app.buttons["library.torusGeodesics"].exists)
+        XCTAssertTrue(app.buttons["library.torus"].exists)
+        XCTAssertFalse(app.buttons["library.lorenz"].exists)
+        app.buttons["library.torusGeodesics"].click()
+        XCTAssertTrue(app.buttons["geodesicPause"].waitForExistence(timeout: 5))
+        app.buttons["geodesicPause"].click()
+        app.buttons["libraryToggle"].click()
+        XCTAssertFalse(search.exists)
+        XCTAssertTrue(app.buttons["geodesicStep"].isEnabled)
+        app.buttons["librarySearchButton"].click()
+        XCTAssertTrue(search.exists)
+        search.click(); app.typeKey("a", modifierFlags: .command)
+        search.typeText("no-such-experiment")
+        XCTAssertTrue(app.buttons["clearLibraryFilters"].exists)
+        app.buttons["clearLibraryFilters"].click()
+        XCTAssertTrue(app.buttons["library.lorenz"].exists)
+        XCTAssertTrue(app.buttons["geodesicStep"].isEnabled)
+        capture("Library beside paused workspace", app: app)
+    }
+
     func testGalleryBlankAndInspector() {
         let app = XCUIApplication()
         app.launch()
