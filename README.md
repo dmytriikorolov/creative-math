@@ -3,7 +3,7 @@
 Native macOS creative mathematics workstation. Swift 6, SwiftUI, Metal; macOS 14+.
 The product name is provisional. **M0, M1 and M2 are accepted and complete** per user
 confirmation on 2026-11-02. M3.1 Torus Geodesics is implemented with local animation review pending. Active work is
-**M3.2 — Wormhole Geodesics**, also awaiting user review. M3.3 has not started.
+**M3.2 — Wormhole Geodesics**, also awaiting user review. Unmerged UX-01, M4.1 and M3.3 work is tracked in [autonomous progress](docs/AUTONOMOUS_PROGRESS.md); the two new planar feature PRs remain draft pending actual UI verification.
 
 ## Development audit and workflow
 

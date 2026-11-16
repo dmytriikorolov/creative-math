@@ -14,11 +14,17 @@ struct WorkspaceView: View {
     @State private var geodesic = GeodesicSession()
     @State private var wormhole = WormholeSession()
     @State private var optimization = OptimizationSession()
+    @State private var vectors = VectorFieldSession()
     @State private var savedPanelFrame: CGRect?
     @State private var livePanelFrame: CGRect?
     @State private var interactionStart: CGRect?
     @FocusState private var panelFocused: Bool
 
+    private var activePlanar: (any PlanarTransportSession)? {
+        if scene == .optimization { return optimization }
+        if scene == .vectorFields { return vectors }
+        return nil
+    }
     private var activeMotion: (any SurfaceMotionSession)? {
         if scene == .torusGeodesics { return geodesic }
         if scene == .wormholeGeodesics { return wormhole }
@@ -54,7 +60,7 @@ struct WorkspaceView: View {
         .frame(minWidth: 900, minHeight: 600)
         .background(Design.canvas)
         .foregroundStyle(Design.primary)
-        .focusedSceneValue(\.optimizationSession, scene == .optimization ? optimization : nil)
+        .focusedSceneValue(\.planarSession, activePlanar)
         .focusedSceneValue(\.lorenzSession, scene == .lorenz ? lorenz : nil)
         .focusedSceneValue(\.surfaceSession, scene == .surface ? surface : activeMotion?.surface)
         .focusedSceneValue(\.geodesicSession, activeMotion)
@@ -271,7 +277,9 @@ struct WorkspaceView: View {
     private func workspace(_ scene: WorkspaceScene) -> some View {
         GeometryReader { geometry in
             ZStack(alignment: .topLeading) {
-                if scene == .optimization {
+                if scene == .vectorFields {
+                    VectorFieldWorkspace(session: vectors, inspectorVisible: inspectorVisible)
+                } else if scene == .optimization {
                     OptimizationWorkspace(session: optimization, inspectorVisible: inspectorVisible)
                 } else if scene == .lorenz {
                     LorenzViewport(session: lorenz, revision: lorenz.revision)
@@ -322,6 +330,7 @@ struct WorkspaceView: View {
 
     private func caption(_ scene: WorkspaceScene) -> (String,String) {
         switch scene {
+        case .vectorFields: ("VECTOR FIELDS / PHASE PLANE", "Fixed-step integration · Double precision")
         case .optimization: ("OPTIMIZATION / LOCAL METHODS", "Discrete iterations · Double precision · safeguarded steps")
         case .wormholeGeodesics:
             ("WORMHOLE / STARTING-POSITION COMPARISON",wormhole.summary)
@@ -376,7 +385,9 @@ struct WorkspaceView: View {
             Rectangle().fill(Design.border).frame(height: 1)
             ScrollView {
                 VStack(alignment: .leading, spacing: 12) {
-                    if scene == .optimization {
+                    if scene == .vectorFields {
+                        VectorFieldInspector(session: vectors)
+                    } else if scene == .optimization {
                         OptimizationInspector(session: optimization)
                     } else if scene == .lorenz {
                         LorenzInspector(session: lorenz)
@@ -516,6 +527,7 @@ private struct LibraryExperiment: Identifiable {
         return query.split(whereSeparator: { $0.isWhitespace }).allSatisfy { text.localizedStandardContains(String($0)) }
     }
     static let entries: [Self] = [
+        Self(id: "vectorFields", title: "Vector Fields", detail: "Phase plane · direction and trajectories", category: .dynamics, scene: .vectorFields),
         Self(id: "optimization", title: "Optimization Lab", detail: "Level sets · gradient, momentum, Newton", category: .optimization, scene: .optimization),
         Self(id: "lorenz", title: "Lorenz Attractor", detail: "Chaos · Classic, Filament, Sculpture", category: .dynamics, scene: .lorenz),
         Self(id: "torusGeodesics", title: "Torus Geodesics", detail: "Motion on a curved surface · RK4", category: .dynamics, scene: .torusGeodesics),
