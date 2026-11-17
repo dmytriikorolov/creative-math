@@ -1,0 +1,236 @@
+[0/1] Planning build
+Building for debugging...
+[0/6] Write swift-version--1AB21518FC5DEDBE.txt
+Build complete! (1.02s)
+◇ Test run started.
+↳ Testing Library Version: 1902
+↳ Target Platform: arm64e-apple-macos14.0
+◇ Test cameraCanFocusATargetWithoutChangingExistingZoomLimits() started.
+◇ Test cameraProjectionPreservesAxesDepthAndAspect() started.
+◇ Test meridiansAndSupportedRadiusCornersStayFinite() started.
+◇ Test ellisRendererModesReuseGeometryAndDrawActualTrajectories() started.
+◇ Test fadeZeroDurationInvalidInputsAndHistoryLimits() started.
+◇ Test surfaceRendererDrawsBothPresetsAndReusesUnchangedMeshes() started.
+◇ Test coordinateGridIsBoundedAndContainsAxesAndTicks() started.
+◇ Test pauseFreezesSimulationAgeAndSingleStepAdvancesIt() started.
+◇ Test gpuMatchesCPUReferenceAndResets() started.
+◇ Test fasterWormholePlaybackKeepsFixedStepsAndCatchUpBound() started.
+◇ Test roundedMeshStoresStableGridAnglesAtTheReturnTangent() started.
+◇ Test followCameraRespectsPausedStepRestartAndInvalidTargets() started.
+◇ Test gpuRibbonFramesPreserveMathRenderAndFreezeWhenPaused() started.
+◇ Test extendedGeodesicsStayFiniteOnSurfaceWithMeasuredDrift() started.
+◇ Test gpuRingContentsAndPresetTransitions() started.
+◇ Test invalidFrameRecoversToFiniteDefault() started.
+◇ Test stableDynamicsConvergeWithoutRecoveryOrForcedMotion() started.
+◇ Test surfaceCameraProjectionMatchesExistingLorenzConvention() started.
+◇ Test lorenzDerivativeAndEquilibria() started.
+◇ Test integrationRestartBatchingAndRingHistoryAreDeterministic() started.
+◇ Test parallelStartsHaveSameHeadingAndUnitSurfaceSpeed() started.
+◇ Test presetRepresentationsAndAppearanceLimits() started.
+◇ Test launchIsNormalizedInTheMetricAtEveryPosition() started.
+◇ Test ellisNearCriticalRK4ConvergesAndDoesNotCrossSpuriously() started.
+◇ Test followCameraTracksEveryStepWithoutRotatingOrZooming() started.
+◇ Test clockAccountsForDroppedTimeAndPreservesFractionalPhase() started.
+◇ Test dragClampsAtEveryBoundary() started.
+◇ Test geodesicOverlayPreservesSurfaceDepthAndFrozenHistory() started.
+◇ Test clockBoundsCatchupAndValidatesSpeed() started.
+◇ Test widerReturnHasRoomForARoundedTurn() started.
+◇ Test rk4MatchesIndependentDOP853AndConverges() started.
+◇ Test fullContinuousPoolRepeatsAcrossSeedsShapesAndRestarts() started.
+◇ Test continuousLaunchesAreIndependentOfRenderCadence() started.
+◇ Test continuousLaunchesRecycleOnlyEscapedSlotsAndRepeatTheSeed() started.
+◇ Test ellisConservationOverExtendedTrajectories() started.
+◇ Test gpuStableDynamicsSettleWithoutRestarting() started.
+◇ Test gpuRecoversFromNonFiniteInputWithoutConnectingOldTrail() started.
+◇ Test continuousModeStartsWithAnExactRowAndRestoresItAfterRecycling() started.
+◇ Test cameraLimitsAndSimulationIndependence() started.
+◇ Test changingOneStartingPointChangesTheOutcomeWithoutChangingHeading() started.
+◇ Test roundedReturnUsesAnEllipticalSectionWithASmoothApproach() started.
+◇ Test resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test particleAndTrailAppearanceValidateScreenPointRanges() started.
+◇ Test fadeDelayDurationAndSmoothBoundaries() started.
+◇ Test ellisAccelerationAndUnitLaunchMatchMetric() started.
+◇ Test followWaitsAndReturnsWithoutLosingUserIntent() started.
+◇ Test ellisRadialGeodesicRestartAndPlaybackContinuesBeyondMesh() started.
+◇ Test clampingFitsSmallerWorkspaceAndIsIdempotent() started.
+◇ Test torusMetricAndAccelerationMatchGeometry() started.
+◇ Test restoredFunnelMatchesAcceptedSurfaceAndItsInducedMetric() started.
+◇ Test defaultSizeRestorationKeepsPositionWhenPossible() started.
+◇ Test rk4GeodesicsConvergeWhenTimestepIsHalved() started.
+◇ Test preferencesMigrateExistingPositionAndDefaultMissingDimensions() started.
+◇ Test seededResetAndBatchingAreRepeatable() started.
+◇ Test packedTransportStaysStableAlongLorenzTrajectory() started.
+◇ Test roundedSolverConvergesAndHandlesShapeExtremes() started.
+◇ Test escapedBallsRetireIndependentlyAndRestartRestoresThem() started.
+◇ Test resizeFollowsPointerWithoutAccumulatingDeltas() started.
+◇ Test geodesicPauseFreezesTrailAgeAndStepAgesExactlyOnce() started.
+◇ Test resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test preferencesRoundTripPositionAndDimensions() started.
+◇ Test ellisSignedRegionAndWindingSymmetries() started.
+◇ Test equatorialGeodesicsTraceActualCirclesOverMultipleLaps() started.
+◇ Test analyticSurfaceNormalsAreOrthogonalToFiniteDifferenceTangents() started.
+◇ Test transportedRibbonFramesHandlePolesReversalsAndInvalidTangents() started.
+◇ Test equilibriumIsInvariantAndZAxisMatchesAnalyticDecay() started.
+◇ Test oppositeMagnetsDoNotOverlapWhenPanelNearlyFillsWorkspace() started.
+◇ Test ellisEmbeddingInducesMetricAndIsSmoothAtThroat() started.
+◇ Test roundedDefaultBeamRemainsStableAcrossReturnPasses() started.
+◇ Test playbackMultiplierChangesRateWithoutRestartOrLargerSteps() started.
+◇ Test roundedMeshWeldsOneEdgeAndKeepsFiniteSurfaceSamples() started.
+◇ Test clockIsRefreshIndependentAndPauseDoesNotAccumulate() started.
+◇ Test continuousLaunchPoolPreservesParticlesThatRemainOnSurface() started.
+◇ Test returnBlendHasContinuousGradientAndCurvature() started.
+◇ Test packedRibbonFramesAreFiniteAndKeepPrecision() started.
+◇ Test comparisonProducesCrossingsAndDeflectionsThenRetiresEscapedTracks() started.
+◇ Test ellisCrossingReturningAndNearCriticalBehavior() started.
+◇ Test magneticAttractionIsSymmetricForAllEdges() started.
+◇ Test followSelectionAndReducedMotionReturnImmediately() started.
+◇ Test wormholeHasOpenThroatFixedRimAndContinuousFlatLimit() started.
+◇ Test supportedParameterCornersRemainFinite() started.
+◇ Test meshBoundsSeamsAndParameterValidation() started.
+◇ Test periodicWrappingAndSeamsRemainGeometricallyContinuous() started.
+◇ Test benchmarkCLIRejectsSilentNoOutputAndUnknownOptions() started.
+◇ Test validationRejectsEveryNonFiniteModelComponentAndCountBoundary() started.
+◇ Test magneticAttractionIsContinuousAndMonotonic() started.
+◇ Test roundedReturnSurfaceHasConsistentDerivativesAndJoinedSheets() started.
+◇ Test ellisDisplayInterpolationAndFollowStayContinuousAcrossThroatAndSeam() started.
+◇ Test nearbyInnerEquatorIsNotArtificiallyLockedAndFloatTrailStaysOnSurface() started.
+◇ Test geodesicClockIsIndependentOfDisplayRefresh() started.
+◇ Test dragUsesInitialFrameAndTotalTranslation() started.
+◇ Test torusSamplesSatisfyImplicitSurfaceAndPeriodicSeams() started.
+◇ Test fadeDrawRangeNeverOmitsANonzeroEndpoint() started.
+◇ Test repeatedDragStartsAtDisplayedFrameAndFollowsPointerDirection() started.
+◇ Test invalidGeodesicInputsAreRejected() started.
+◇ Test ellisInputsValidateWithoutClampingLaunches() started.
+◇ Test roundedReturnGeodesicsTraverseTheEdgeWithoutBounceOrReseed() started.
+◇ Test parameterValidationAndStableReference() started.
+ELLIS_CONVERGENCE nearCritical t=24 errors 5.60706578847053e-06 3.5114723140705823e-07 2.196951734604835e-08 ratios 15.967848489087718 15.98338397134696
+✘ Test ellisRendererModesReuseGeometryAndDrawActualTrajectories() recorded an issue at WormholeRenderingTests.swift:49:5: Expectation failed: try image(material: material,playback: backPlayback,marker: pointOnly) == shaded
+◇ Test case passing 1 argument edges → Edges(rawValue: 1) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 2) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 4) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 8) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 5) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 6) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 9) to resizeKeepsOppositeEdgesFixed(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 10) to resizeKeepsOppositeEdgesFixed(edges:) started.
+GEODESIC_CONVERGENCE time=12s errors h=.1,.05,.025: 9.047971280234082e-05, 4.718958953247797e-06, 2.671304946316368e-07; ratios 19.173659635261007, 17.665369727836836
+◇ Test case passing 1 argument edges → Edges(rawValue: 1) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 2) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 4) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 8) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 5) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 6) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 9) to resizeHonorsLimitsAndWorkspace(edges:) started.
+◇ Test case passing 1 argument edges → Edges(rawValue: 10) to resizeHonorsLimitsAndWorkspace(edges:) started.
+GEODESIC_EQUATOR v=0.0 time=100s maximum world error=2.6912118663032877e-12
+ELLIS_DRIFT crossing a=1 duration=1000s dt=0.004166666666666667 max_energy=8.379963389870682e-13 max_abs_J=1.8810508706224027e-12
+GEODESIC_DRIFT R=6.0 r=2.0 speed=4.0 duration=1000s dt=0.004166666666666667 max relative speed=8.447242905162966e-12 momentum=6.36612984550311e-12 constraint=7.993605777301127e-15
+GEODESIC_EQUATOR v=3.141592653589793 time=100s maximum world error=6.59731638189932e-12
+ROUNDED_CONVERGENCE coarse=5.783188875885983e-08 fine=7.551351991895408e-10
+ELLIS_BEHAVIOR crossing min_l=-12.000893575007337 residence_abs_l_lt_a=4.912500000000041 angular_travel=2.0640368673986567 final_l=-12.000893575007337
+ELLIS_BEHAVIOR deflection min_l=1.9595918432307065 residence_abs_l_lt_a=1.1374999999999973 angular_travel=3.142362240842199 final_l=12.001022467474003
+ELLIS_BEHAVIOR nearCritical min_l=0.02828497840898069 residence_abs_l_lt_a=20.712499999999146 angular_travel=10.876999093242166 final_l=12.001147728218031
+✔ Test fadeZeroDurationInvalidInputsAndHistoryLimits() passed after 1.250 seconds.
+✔ Test invalidFrameRecoversToFiniteDefault() passed after 1.250 seconds.
+✔ Test pauseFreezesSimulationAgeAndSingleStepAdvancesIt() passed after 1.250 seconds.
+✔ Test lorenzDerivativeAndEquilibria() passed after 1.373 seconds.
+✔ Test coordinateGridIsBoundedAndContainsAxesAndTicks() passed after 1.385 seconds.
+✔ Test parallelStartsHaveSameHeadingAndUnitSurfaceSpeed() passed after 1.420 seconds.
+ROUNDED_EDGE s=60 maximum_constraint_or_energy_error=2.4065744290208987e-10
+✔ Test presetRepresentationsAndAppearanceLimits() passed after 1.760 seconds.
+✔ Test launchIsNormalizedInTheMetricAtEveryPosition() passed after 1.760 seconds.
+ELLIS_DRIFT deflection a=1 duration=1000s dt=0.004166666666666667 max_energy=8.766321002440236e-13 max_abs_J=6.770140004164205e-13
+✔ Test clockAccountsForDroppedTimeAndPreservesFractionalPhase() passed after 1.786 seconds.
+✔ Test dragClampsAtEveryBoundary() passed after 1.786 seconds.
+✔ Test clockBoundsCatchupAndValidatesSpeed() passed after 1.786 seconds.
+✔ Test widerReturnHasRoomForARoundedTurn() passed after 1.786 seconds.
+✔ Test rk4MatchesIndependentDOP853AndConverges() passed after 1.786 seconds.
+✔ Test integrationRestartBatchingAndRingHistoryAreDeterministic() passed after 1.786 seconds.
+✔ Test fasterWormholePlaybackKeepsFixedStepsAndCatchUpBound() passed after 1.786 seconds.
+✔ Test ellisNearCriticalRK4ConvergesAndDoesNotCrossSpuriously() passed after 1.786 seconds.
+✔ Test roundedMeshStoresStableGridAnglesAtTheReturnTangent() passed after 1.786 seconds.
+✔ Test stableDynamicsConvergeWithoutRecoveryOrForcedMotion() passed after 1.786 seconds.
+✔ Test cameraLimitsAndSimulationIndependence() passed after 1.786 seconds.
+✔ Test roundedReturnUsesAnEllipticalSectionWithASmoothApproach() passed after 1.786 seconds.
+✔ Test changingOneStartingPointChangesTheOutcomeWithoutChangingHeading() passed after 1.786 seconds.
+✔ Test resizeKeepsOppositeEdgesFixed(edges:) with 8 test cases passed after 1.786 seconds.
+✔ Test particleAndTrailAppearanceValidateScreenPointRanges() passed after 1.786 seconds.
+✔ Test fadeDelayDurationAndSmoothBoundaries() passed after 1.786 seconds.
+✔ Test ellisAccelerationAndUnitLaunchMatchMetric() passed after 1.786 seconds.
+✔ Test followWaitsAndReturnsWithoutLosingUserIntent() passed after 1.786 seconds.
+✔ Test ellisRadialGeodesicRestartAndPlaybackContinuesBeyondMesh() passed after 1.786 seconds.
+✔ Test clampingFitsSmallerWorkspaceAndIsIdempotent() passed after 1.786 seconds.
+✔ Test torusMetricAndAccelerationMatchGeometry() passed after 1.786 seconds.
+✔ Test restoredFunnelMatchesAcceptedSurfaceAndItsInducedMetric() passed after 1.787 seconds.
+✔ Test defaultSizeRestorationKeepsPositionWhenPossible() passed after 1.786 seconds.
+✔ Test rk4GeodesicsConvergeWhenTimestepIsHalved() passed after 1.786 seconds.
+✔ Test meridiansAndSupportedRadiusCornersStayFinite() passed after 1.787 seconds.
+✔ Test preferencesMigrateExistingPositionAndDefaultMissingDimensions() passed after 1.786 seconds.
+✔ Test seededResetAndBatchingAreRepeatable() passed after 1.786 seconds.
+✔ Test packedTransportStaysStableAlongLorenzTrajectory() passed after 1.786 seconds.
+✔ Test escapedBallsRetireIndependentlyAndRestartRestoresThem() passed after 1.787 seconds.
+✔ Test resizeFollowsPointerWithoutAccumulatingDeltas() passed after 1.787 seconds.
+✔ Test geodesicPauseFreezesTrailAgeAndStepAgesExactlyOnce() passed after 1.787 seconds.
+✔ Test preferencesRoundTripPositionAndDimensions() passed after 1.787 seconds.
+✔ Test resizeHonorsLimitsAndWorkspace(edges:) with 8 test cases passed after 1.787 seconds.
+✔ Test ellisSignedRegionAndWindingSymmetries() passed after 1.787 seconds.
+✔ Test continuousLaunchesRecycleOnlyEscapedSlotsAndRepeatTheSeed() passed after 1.787 seconds.
+✔ Test analyticSurfaceNormalsAreOrthogonalToFiniteDifferenceTangents() passed after 1.787 seconds.
+✔ Test transportedRibbonFramesHandlePolesReversalsAndInvalidTangents() passed after 1.787 seconds.
+✔ Test equilibriumIsInvariantAndZAxisMatchesAnalyticDecay() passed after 1.787 seconds.
+✔ Test oppositeMagnetsDoNotOverlapWhenPanelNearlyFillsWorkspace() passed after 1.787 seconds.
+✔ Test ellisEmbeddingInducesMetricAndIsSmoothAtThroat() passed after 1.787 seconds.
+✔ Test continuousLaunchesAreIndependentOfRenderCadence() passed after 1.787 seconds.
+✔ Test playbackMultiplierChangesRateWithoutRestartOrLargerSteps() passed after 1.787 seconds.
+✔ Test equatorialGeodesicsTraceActualCirclesOverMultipleLaps() passed after 1.787 seconds.
+✔ Test clockIsRefreshIndependentAndPauseDoesNotAccumulate() passed after 1.787 seconds.
+✔ Test continuousLaunchPoolPreservesParticlesThatRemainOnSurface() passed after 1.787 seconds.
+✔ Test returnBlendHasContinuousGradientAndCurvature() passed after 1.787 seconds.
+✔ Test packedRibbonFramesAreFiniteAndKeepPrecision() passed after 1.787 seconds.
+✔ Test roundedMeshWeldsOneEdgeAndKeepsFiniteSurfaceSamples() passed after 1.787 seconds.
+✔ Test ellisCrossingReturningAndNearCriticalBehavior() passed after 1.787 seconds.
+✔ Test magneticAttractionIsSymmetricForAllEdges() passed after 1.787 seconds.
+✔ Test followSelectionAndReducedMotionReturnImmediately() passed after 1.787 seconds.
+✔ Test cameraProjectionPreservesAxesDepthAndAspect() passed after 1.788 seconds.
+✔ Test wormholeHasOpenThroatFixedRimAndContinuousFlatLimit() passed after 1.786 seconds.
+✔ Test supportedParameterCornersRemainFinite() passed after 1.786 seconds.
+✔ Test meshBoundsSeamsAndParameterValidation() passed after 1.786 seconds.
+✔ Test periodicWrappingAndSeamsRemainGeometricallyContinuous() passed after 1.786 seconds.
+✔ Test benchmarkCLIRejectsSilentNoOutputAndUnknownOptions() passed after 1.786 seconds.
+✔ Test validationRejectsEveryNonFiniteModelComponentAndCountBoundary() passed after 1.786 seconds.
+✔ Test magneticAttractionIsContinuousAndMonotonic() passed after 1.786 seconds.
+✔ Test roundedReturnSurfaceHasConsistentDerivativesAndJoinedSheets() passed after 1.786 seconds.
+✔ Test ellisDisplayInterpolationAndFollowStayContinuousAcrossThroatAndSeam() passed after 1.786 seconds.
+✔ Test cameraCanFocusATargetWithoutChangingExistingZoomLimits() passed after 1.788 seconds.
+✔ Test nearbyInnerEquatorIsNotArtificiallyLockedAndFloatTrailStaysOnSurface() passed after 1.786 seconds.
+✔ Test geodesicClockIsIndependentOfDisplayRefresh() passed after 1.785 seconds.
+✔ Test dragUsesInitialFrameAndTotalTranslation() passed after 1.785 seconds.
+✔ Test torusSamplesSatisfyImplicitSurfaceAndPeriodicSeams() passed after 1.785 seconds.
+✔ Test fadeDrawRangeNeverOmitsANonzeroEndpoint() passed after 1.784 seconds.
+✔ Test repeatedDragStartsAtDisplayedFrameAndFollowsPointerDirection() passed after 1.784 seconds.
+✔ Test invalidGeodesicInputsAreRejected() passed after 1.784 seconds.
+✔ Test ellisInputsValidateWithoutClampingLaunches() passed after 1.784 seconds.
+✔ Test roundedReturnGeodesicsTraverseTheEdgeWithoutBounceOrReseed() passed after 1.784 seconds.
+✔ Test parameterValidationAndStableReference() passed after 1.787 seconds.
+✘ Test ellisRendererModesReuseGeometryAndDrawActualTrajectories() failed after 1.788 seconds with 1 issue.
+✔ Test surfaceRendererDrawsBothPresetsAndReusesUnchangedMeshes() passed after 1.789 seconds.
+✔ Test gpuMatchesCPUReferenceAndResets() passed after 1.789 seconds.
+✔ Test followCameraRespectsPausedStepRestartAndInvalidTargets() passed after 1.789 seconds.
+✔ Test gpuRibbonFramesPreserveMathRenderAndFreezeWhenPaused() passed after 1.789 seconds.
+✔ Test gpuRingContentsAndPresetTransitions() passed after 1.789 seconds.
+✔ Test surfaceCameraProjectionMatchesExistingLorenzConvention() passed after 1.789 seconds.
+✔ Test followCameraTracksEveryStepWithoutRotatingOrZooming() passed after 1.789 seconds.
+✔ Test geodesicOverlayPreservesSurfaceDepthAndFrozenHistory() passed after 1.789 seconds.
+✔ Test gpuStableDynamicsSettleWithoutRestarting() passed after 1.789 seconds.
+✔ Test gpuRecoversFromNonFiniteInputWithoutConnectingOldTrail() passed after 1.789 seconds.
+GEODESIC_DRIFT R=4.0 r=3.0 speed=8.0 duration=1000s dt=0.004166666666666667 max relative speed=3.1652036547313855e-10 momentum=3.989548691407663e-10 constraint=1.0658141036401503e-14
+✔ Test extendedGeodesicsStayFiniteOnSurfaceWithMeasuredDrift() passed after 1.916 seconds.
+FUNNEL_COMPARISON s=80 balls=13 through=5 deflected=8
+✔ Test comparisonProducesCrossingsAndDeflectionsThenRetiresEscapedTracks() passed after 2.307 seconds.
+ELLIS_DRIFT nearCritical a=1 duration=1000s dt=0.004166666666666667 max_energy=1.3085088568232095e-12 max_abs_J=1.616484723854228e-12
+✔ Test ellisConservationOverExtendedTrajectories() passed after 2.345 seconds.
+✔ Test roundedSolverConvergesAndHandlesShapeExtremes() passed after 2.385 seconds.
+✔ Test roundedDefaultBeamRemainsStableAcrossReturnPasses() passed after 3.757 seconds.
+✔ Test continuousModeStartsWithAnExactRowAndRestoresItAfterRecycling() passed after 6.234 seconds.
+✔ Test fullContinuousPoolRepeatsAcrossSeedsShapesAndRestarts() passed after 16.762 seconds.
+✘ Test run with 98 tests in 0 suites failed after 16.764 seconds with 1 issue.
