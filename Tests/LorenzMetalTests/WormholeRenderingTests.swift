@@ -16,18 +16,18 @@ func ellisRendererModesReuseGeometryAndDrawActualTrajectories() throws {
     let staging = try #require(device.makeBuffer(length: 256*256*4,options: .storageModeShared))
     var slot = 0
     func image(_ geometry: EllisWormhole = EllisWormhole(), material: WormholeSurfaceAppearance = WormholeSurfaceAppearance(),
-               playback: WormholePlayback? = nil, marker: GeodesicAppearance = GeodesicAppearance(), ballNormal: SIMD3<Double>? = nil, grid: CoordinateGrid = CoordinateGrid()) throws -> [UInt8] {
+               playback: WormholePlayback? = nil, marker: GeodesicAppearance = GeodesicAppearance(), ballNormal: SIMD3<Double>? = nil, grid: CoordinateGrid = CoordinateGrid(), camera: OrbitCamera? = nil) throws -> [UInt8] {
         let command = try #require(renderer.queue.makeCommandBuffer())
         let pass = MTLRenderPassDescriptor()
         pass.colorAttachments[0].texture = color; pass.colorAttachments[0].loadAction = .clear; pass.colorAttachments[0].storeAction = .store
         pass.colorAttachments[0].clearColor = MTLClearColor(red: 0.002428,green: 0.002732,blue: 0.003347,alpha: 1)
         pass.depthAttachment.texture = depth; pass.depthAttachment.loadAction = .clear; pass.depthAttachment.storeAction = .store; pass.depthAttachment.clearDepth = 1
-        try renderer.encode(into: command,pass: pass,ellis: geometry,appearance: material,camera: geometry.camera,surfaceDensity: 48,grid: grid,size: SIMD2(256,256))
+        try renderer.encode(into: command,pass: pass,ellis: geometry,appearance: material,camera: camera ?? geometry.camera,surfaceDensity: 48,grid: grid,size: SIMD2(256,256))
         if let playback {
             pass.colorAttachments[0].loadAction = .load; pass.depthAttachment.loadAction = .load
             try trails.encodeBatch(into: command,pass: pass,
                                    tracks: [GeodesicRenderTrack(trail: playback.trail,particle: playback.presentationPosition,appearance: marker,ballNormal: ballNormal)],
-                                   fade: TrailFade(delay: 20,duration: 12),camera: geometry.camera,size: SIMD2(256,256),slot: slot,depthTolerance: 0.01)
+                                   fade: TrailFade(delay: 20,duration: 12),camera: camera ?? geometry.camera,size: SIMD2(256,256),slot: slot,depthTolerance: 0.01)
         }
         let blit = try #require(command.makeBlitCommandEncoder())
         blit.copy(from: color,sourceSlice: 0,sourceLevel: 0,sourceOrigin: MTLOrigin(x: 0,y: 0,z: 0),sourceSize: MTLSize(width: 256,height: 256,depth: 1),
@@ -46,7 +46,12 @@ func ellisRendererModesReuseGeometryAndDrawActualTrajectories() throws {
     #expect(try image(material: material,playback: frontPlayback,marker: pointOnly) != shaded)
     var back = front; back.initialPhi += .pi
     var backPlayback = try WormholePlayback(configuration: back); backPlayback.isPaused = true
-    #expect(try image(material: material,playback: backPlayback,marker: pointOnly) == shaded)
+    // At the elevated presentation angle the far throat can be visible through
+    // the opening. A level view puts the near throat directly in front of it.
+    var occlusionCamera = front.geometry.camera; occlusionCamera.pitch = 0
+    let levelSurface = try image(material: material,camera: occlusionCamera)
+    #expect(try image(material: material,playback: frontPlayback,marker: pointOnly,camera: occlusionCamera) != levelSurface)
+    #expect(try image(material: material,playback: backPlayback,marker: pointOnly,camera: occlusionCamera) == levelSurface)
     var ball = pointOnly; ball.particleDiameterPoints = 16
     let normal = -front.geometry.normal(l: front.initialL,phi: front.initialPhi)
     let sphere = try image(material: material,playback: frontPlayback,marker: ball,ballNormal: normal)

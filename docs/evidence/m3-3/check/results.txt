@@ -1,0 +1,4 @@
+tests: PASS
+build: PASS
+signature: PASS
+VISUAL QA: NOT RUN by this script. Inspect the live app and record screenshots separately.
